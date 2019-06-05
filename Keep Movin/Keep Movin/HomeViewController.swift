@@ -91,6 +91,35 @@ class PerformanceCell: UICollectionViewCell {
         self.layer.cornerRadius = 20
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+        
+        setupViews()
+    }
+    
+    func setupViews() {
+        let shapeLayer = CAShapeLayer()
+        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -(CGFloat.pi / 2), endAngle: 2 * CGFloat.pi, clockwise: true)
+        shapeLayer.path = circularPath.cgPath
+        shapeLayer.strokeColor = UIColor.white.cgColor
+        shapeLayer.lineWidth = 20
+        shapeLayer.strokeEnd = 0
+        shapeLayer.lineCap = .round
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        layer.addSublayer(shapeLayer)
+        
+        let trackLayer = CAShapeLayer()
+        trackLayer.path = circularPath.cgPath
+        trackLayer.strokeColor = UIColor.white.withAlphaComponent(0.5).cgColor
+        trackLayer.lineWidth = 20
+        trackLayer.strokeEnd = 1
+        trackLayer.fillColor = UIColor.clear.cgColor
+        layer.addSublayer(trackLayer)
+        
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        basicAnimation.toValue = 0.3
+        basicAnimation.duration = 2
+        basicAnimation.fillMode = .forwards
+        basicAnimation.isRemovedOnCompletion = false
+        shapeLayer.add(basicAnimation, forKey: "")
     }
 
     required init?(coder aDecoder: NSCoder) {
