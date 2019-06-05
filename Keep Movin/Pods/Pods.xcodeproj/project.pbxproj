@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09AB29E53DAC89BA48801D361E6337AF /* Stevia+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674F9E8579B532E8BD926EF814786A72 /* Stevia+Center.swift */; };
+		09C163B7B20745198AD2240B8D7BA59D /* Stevia+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6EA71A1BFB28092929518BC984F60 /* Stevia+Percentage.swift */; };
+		4279D828D3F0A333EFF4F4E0EC73587B /* Stevia+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92108C235C8A12859AFE5CCC0539CE93 /* Stevia+Notifications.swift */; };
+		43758ADAF64D578E7E5A3BB680AE6447 /* Pods-Keep Movin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713D93A30A35AB3F37684488189D6 /* Pods-Keep Movin-dummy.m */; };
+		4462B503E824473DFFB7BDF8F3EE3F69 /* Stevia+FlexibleMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBDA61AC031C676AE07D3D505BCF11 /* Stevia+FlexibleMargin.swift */; };
+		4E422BF3DFD320D3CE49B99AE53C7843 /* Stevia+Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C94A117F0A45999C0CEAB368A9182 /* Stevia+Fill.swift */; };
+		5F01C4617F78F827EB62CF69C83BEE1A /* Pods-Keep Movin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1886983EF8640B6C9F755AAEA653AA /* Pods-Keep Movin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60E1EFF56DFE9418F2E8BDDABC5AD319 /* Stevia+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5744DD3E2E7C26A0914A2E737AB02D14 /* Stevia+Operators.swift */; };
+		6F9828761A378189AFBD853F8F3987DA /* Stevia+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4B6B2DAB68B7D63E01383D2956E9E /* Stevia+Stacks.swift */; };
+		85C1518C735C1EC5347D7882B8F7C936 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		8601F2EB7DA2768034085676AC201DB6 /* Stevia+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0CC84071CDFD15DC19859C2268743F /* Stevia+Hierarchy.swift */; };
+		8BBCB37CAEF22E6A4A9866B0679E4D38 /* Stevia+Baselines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558A7DC4425030366D4F39799199B8B8 /* Stevia+Baselines.swift */; };
+		8E57BA085FA9DB4D16A2C8B922D6E310 /* Stevia+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B936DD8E50B6548B55B19D38BB5EC /* Stevia+Constraints.swift */; };
+		9D8F8C25D8AE060D1C73DA08EE70AEA6 /* Stevia+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE941B5E818620A2CCCB84E958A4EB0 /* Stevia+Position.swift */; };
+		A23AC7DF3E955E5B6CEE27FCE5B2CF8C /* Stevia+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F96664E75D592F6BF6189402DBBA6 /* Stevia+Size.swift */; };
+		B1319E92CA7CFA14FF426AAA34F5076F /* Stevia+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7498C7B11359341716AEAA3B32E5171 /* Stevia+Alignment.swift */; };
+		B41A4BC8EF655B973D114F091DA897EB /* SteviaLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05AD4FA1E20C4DD8A2E412F5122FE8 /* SteviaLayout-dummy.m */; };
+		C2D87B4D3D2AFBF0FBB852E0D2BCA995 /* Stevia+Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A742561CD7F641519CE30D0E05D85D /* Stevia+Equation.swift */; };
+		CA2E353E4884CD6CCE8A806F19469931 /* Stevia+GetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A2E96B74154AAAFC9B2862231D763B /* Stevia+GetConstraint.swift */; };
+		D044D00C857FE111B8139186D31EDCF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		DB091F10DC32E8078B37399FB992A853 /* SteviaLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 783D4EEAD456DEEF0864643196E3E464 /* SteviaLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7B36C30FAFAB0D085B87260857E043E /* Stevia+LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96345A318C67CAC45A2BB4E1FD155A /* Stevia+LayoutAnchors.swift */; };
+		E96D21093AE8689D54B8C20E302C64FC /* Stevia+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2502DAECCF2E167040D29FC581F82A /* Stevia+Style.swift */; };
+		FA7CBBE2FE5D94D1C21A563FF693A751 /* Stevia+DoubleDash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A1A48161DCB60F35AADA5909C16C2 /* Stevia+DoubleDash.swift */; };
+		FC274C12B391771D22BF38990BC71292 /* Stevia+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C551A28E2EE64627AB481F13C289698 /* Stevia+Content.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3206DF0D3BFCF832D5E1ECD1EE5B6779 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B03E0F01072350D0A6CD0C19D1C60A37;
+			remoteInfo = SteviaLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08E192718829EB6FEFF007F470FFAED2 /* SteviaLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-prefix.pch"; sourceTree = "<group>"; };
+		28F4B6B2DAB68B7D63E01383D2956E9E /* Stevia+Stacks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Stacks.swift"; path = "Source/Stevia+Stacks.swift"; sourceTree = "<group>"; };
+		3B380914B092DDA57E2657CA7FFB9DF3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D0CC84071CDFD15DC19859C2268743F /* Stevia+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Hierarchy.swift"; path = "Source/Stevia+Hierarchy.swift"; sourceTree = "<group>"; };
+		4E0B936DD8E50B6548B55B19D38BB5EC /* Stevia+Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Constraints.swift"; path = "Source/Stevia+Constraints.swift"; sourceTree = "<group>"; };
+		52D4E8211D734FED3C660D0BD30598E0 /* Pods-Keep Movin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Keep Movin.modulemap"; sourceTree = "<group>"; };
+		530E25821566FC2E665220F015869F31 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		558A7DC4425030366D4F39799199B8B8 /* Stevia+Baselines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Baselines.swift"; path = "Source/Stevia+Baselines.swift"; sourceTree = "<group>"; };
+		5744DD3E2E7C26A0914A2E737AB02D14 /* Stevia+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Operators.swift"; path = "Source/Stevia+Operators.swift"; sourceTree = "<group>"; };
+		5C1886983EF8640B6C9F755AAEA653AA /* Pods-Keep Movin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Keep Movin-umbrella.h"; sourceTree = "<group>"; };
+		6229672E62712084BDE1A4A3B7E24371 /* Pods-Keep Movin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Keep Movin.release.xcconfig"; sourceTree = "<group>"; };
+		64573F805FBF2EFC2C9AA087D2337F05 /* Pods-Keep Movin-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Keep Movin-acknowledgements.markdown"; sourceTree = "<group>"; };
+		674F9E8579B532E8BD926EF814786A72 /* Stevia+Center.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Center.swift"; path = "Source/Stevia+Center.swift"; sourceTree = "<group>"; };
+		6A80B4126731CE871DF6CD96323D9E22 /* Pods-Keep Movin-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Keep Movin-acknowledgements.plist"; sourceTree = "<group>"; };
+		6E7F96664E75D592F6BF6189402DBBA6 /* Stevia+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Size.swift"; path = "Source/Stevia+Size.swift"; sourceTree = "<group>"; };
+		77A742561CD7F641519CE30D0E05D85D /* Stevia+Equation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Equation.swift"; path = "Source/Stevia+Equation.swift"; sourceTree = "<group>"; };
+		783D4EEAD456DEEF0864643196E3E464 /* SteviaLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-umbrella.h"; sourceTree = "<group>"; };
+		7A8D948D9FB6C2178394BB746B24F983 /* Pods-Keep Movin-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Keep Movin-frameworks.sh"; sourceTree = "<group>"; };
+		7C551A28E2EE64627AB481F13C289698 /* Stevia+Content.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Content.swift"; path = "Source/Stevia+Content.swift"; sourceTree = "<group>"; };
+		7FDE8B3BDA527C451A68A033C8C103A4 /* Pods-Keep Movin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Keep Movin.debug.xcconfig"; sourceTree = "<group>"; };
+		92108C235C8A12859AFE5CCC0539CE93 /* Stevia+Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Notifications.swift"; path = "Source/Stevia+Notifications.swift"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9733FE0B60EEDA8F4CDA48A4A95A6130 /* SteviaLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SteviaLayout.modulemap; sourceTree = "<group>"; };
+		98FBDA61AC031C676AE07D3D505BCF11 /* Stevia+FlexibleMargin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+FlexibleMargin.swift"; path = "Source/Stevia+FlexibleMargin.swift"; sourceTree = "<group>"; };
+		9B6C94A117F0A45999C0CEAB368A9182 /* Stevia+Fill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Fill.swift"; path = "Source/Stevia+Fill.swift"; sourceTree = "<group>"; };
+		9C3A1A48161DCB60F35AADA5909C16C2 /* Stevia+DoubleDash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+DoubleDash.swift"; path = "Source/Stevia+DoubleDash.swift"; sourceTree = "<group>"; };
+		A1A2E96B74154AAAFC9B2862231D763B /* Stevia+GetConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+GetConstraint.swift"; path = "Source/Stevia+GetConstraint.swift"; sourceTree = "<group>"; };
+		ABE6EA71A1BFB28092929518BC984F60 /* Stevia+Percentage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Percentage.swift"; path = "Source/Stevia+Percentage.swift"; sourceTree = "<group>"; };
+		AFD949DBF23C5E9E1938282B3251777F /* Pods-Keep Movin-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Keep Movin-resources.sh"; sourceTree = "<group>"; };
+		C7498C7B11359341716AEAA3B32E5171 /* Stevia+Alignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Alignment.swift"; path = "Source/Stevia+Alignment.swift"; sourceTree = "<group>"; };
+		CCF713D93A30A35AB3F37684488189D6 /* Pods-Keep Movin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Keep Movin-dummy.m"; sourceTree = "<group>"; };
+		D402D8F34778A6F0564C645A23889B69 /* SteviaLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SteviaLayout.xcconfig; sourceTree = "<group>"; };
+		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EF96345A318C67CAC45A2BB4E1FD155A /* Stevia+LayoutAnchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+LayoutAnchors.swift"; path = "Source/Stevia+LayoutAnchors.swift"; sourceTree = "<group>"; };
+		FA05AD4FA1E20C4DD8A2E412F5122FE8 /* SteviaLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SteviaLayout-dummy.m"; sourceTree = "<group>"; };
+		FD2502DAECCF2E167040D29FC581F82A /* Stevia+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Style.swift"; path = "Source/Stevia+Style.swift"; sourceTree = "<group>"; };
+		FD8CCAF351346FA955E5CAB37673D1E8 /* Stevia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Stevia.framework; path = SteviaLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE941B5E818620A2CCCB84E958A4EB0 /* Stevia+Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Position.swift"; path = "Source/Stevia+Position.swift"; sourceTree = "<group>"; };
+		FF7C0925CC87D8BCD7F461AACEAD5838 /* Pods_Keep_Movin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Keep_Movin.framework; path = "Pods-Keep Movin.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F23E30D065C0DD73C27DD5C40610769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D044D00C857FE111B8139186D31EDCF9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83F934CD8B0C66CAD9381A407F4B1E02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C1518C735C1EC5347D7882B8F7C936 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		009F285F6A705D7CAD1296299DD948DE /* SteviaLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C7498C7B11359341716AEAA3B32E5171 /* Stevia+Alignment.swift */,
+				558A7DC4425030366D4F39799199B8B8 /* Stevia+Baselines.swift */,
+				674F9E8579B532E8BD926EF814786A72 /* Stevia+Center.swift */,
+				4E0B936DD8E50B6548B55B19D38BB5EC /* Stevia+Constraints.swift */,
+				7C551A28E2EE64627AB481F13C289698 /* Stevia+Content.swift */,
+				9C3A1A48161DCB60F35AADA5909C16C2 /* Stevia+DoubleDash.swift */,
+				77A742561CD7F641519CE30D0E05D85D /* Stevia+Equation.swift */,
+				9B6C94A117F0A45999C0CEAB368A9182 /* Stevia+Fill.swift */,
+				98FBDA61AC031C676AE07D3D505BCF11 /* Stevia+FlexibleMargin.swift */,
+				A1A2E96B74154AAAFC9B2862231D763B /* Stevia+GetConstraint.swift */,
+				3D0CC84071CDFD15DC19859C2268743F /* Stevia+Hierarchy.swift */,
+				EF96345A318C67CAC45A2BB4E1FD155A /* Stevia+LayoutAnchors.swift */,
+				92108C235C8A12859AFE5CCC0539CE93 /* Stevia+Notifications.swift */,
+				5744DD3E2E7C26A0914A2E737AB02D14 /* Stevia+Operators.swift */,
+				ABE6EA71A1BFB28092929518BC984F60 /* Stevia+Percentage.swift */,
+				FEE941B5E818620A2CCCB84E958A4EB0 /* Stevia+Position.swift */,
+				6E7F96664E75D592F6BF6189402DBBA6 /* Stevia+Size.swift */,
+				28F4B6B2DAB68B7D63E01383D2956E9E /* Stevia+Stacks.swift */,
+				FD2502DAECCF2E167040D29FC581F82A /* Stevia+Style.swift */,
+				73A9E60FE4D59ABDA0FA93C35D767174 /* Support Files */,
+			);
+			name = SteviaLayout;
+			path = SteviaLayout;
+			sourceTree = "<group>";
+		};
+		2C6D71E8DEDE274D31437406131C7822 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				009F285F6A705D7CAD1296299DD948DE /* SteviaLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5F00590E3911512EA9251712E73CA3FD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F54EB0AA130BC97BBC1AF726E2F22314 /* Pods-Keep Movin */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		73A9E60FE4D59ABDA0FA93C35D767174 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B380914B092DDA57E2657CA7FFB9DF3 /* Info.plist */,
+				9733FE0B60EEDA8F4CDA48A4A95A6130 /* SteviaLayout.modulemap */,
+				D402D8F34778A6F0564C645A23889B69 /* SteviaLayout.xcconfig */,
+				FA05AD4FA1E20C4DD8A2E412F5122FE8 /* SteviaLayout-dummy.m */,
+				08E192718829EB6FEFF007F470FFAED2 /* SteviaLayout-prefix.pch */,
+				783D4EEAD456DEEF0864643196E3E464 /* SteviaLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SteviaLayout";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				2C6D71E8DEDE274D31437406131C7822 /* Pods */,
+				B017076431CED0806BCDE7572FD5AD3E /* Products */,
+				5F00590E3911512EA9251712E73CA3FD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B017076431CED0806BCDE7572FD5AD3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF7C0925CC87D8BCD7F461AACEAD5838 /* Pods_Keep_Movin.framework */,
+				FD8CCAF351346FA955E5CAB37673D1E8 /* Stevia.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D5347904CF754D6785B84253F2574A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F54EB0AA130BC97BBC1AF726E2F22314 /* Pods-Keep Movin */ = {
+			isa = PBXGroup;
+			children = (
+				530E25821566FC2E665220F015869F31 /* Info.plist */,
+				52D4E8211D734FED3C660D0BD30598E0 /* Pods-Keep Movin.modulemap */,
+				64573F805FBF2EFC2C9AA087D2337F05 /* Pods-Keep Movin-acknowledgements.markdown */,
+				6A80B4126731CE871DF6CD96323D9E22 /* Pods-Keep Movin-acknowledgements.plist */,
+				CCF713D93A30A35AB3F37684488189D6 /* Pods-Keep Movin-dummy.m */,
+				7A8D948D9FB6C2178394BB746B24F983 /* Pods-Keep Movin-frameworks.sh */,
+				AFD949DBF23C5E9E1938282B3251777F /* Pods-Keep Movin-resources.sh */,
+				5C1886983EF8640B6C9F755AAEA653AA /* Pods-Keep Movin-umbrella.h */,
+				7FDE8B3BDA527C451A68A033C8C103A4 /* Pods-Keep Movin.debug.xcconfig */,
+				6229672E62712084BDE1A4A3B7E24371 /* Pods-Keep Movin.release.xcconfig */,
+			);
+			name = "Pods-Keep Movin";
+			path = "Target Support Files/Pods-Keep Movin";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0C642652A15A7F663727A5093BB44CD6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F01C4617F78F827EB62CF69C83BEE1A /* Pods-Keep Movin-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FCF399777C58725972306F0AF609A9F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB091F10DC32E8078B37399FB992A853 /* SteviaLayout-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B03E0F01072350D0A6CD0C19D1C60A37 /* SteviaLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34563A60C1C4CC34A3C51B706C332773 /* Build configuration list for PBXNativeTarget "SteviaLayout" */;
+			buildPhases = (
+				4FCF399777C58725972306F0AF609A9F /* Headers */,
+				185DFDDFA70BAC9EEFCEF137D73BDCA1 /* Sources */,
+				0F23E30D065C0DD73C27DD5C40610769 /* Frameworks */,
+				B525FE98D50C4682508E207E3BC48614 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SteviaLayout;
+			productName = SteviaLayout;
+			productReference = FD8CCAF351346FA955E5CAB37673D1E8 /* Stevia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DEFE3356581BCEBE26A0124350880E6E /* Pods-Keep Movin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CAA25FCAF4CBA51137DA910603A8DA2 /* Build configuration list for PBXNativeTarget "Pods-Keep Movin" */;
+			buildPhases = (
+				0C642652A15A7F663727A5093BB44CD6 /* Headers */,
+				9CAA2D39570EE1E2F6B0CCAFF9F2FB8E /* Sources */,
+				83F934CD8B0C66CAD9381A407F4B1E02 /* Frameworks */,
+				D6E5FA27ACB15A7D64268A17F5D6DD76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F34FFC863727D604512FEA5EF14D4754 /* PBXTargetDependency */,
+			);
+			name = "Pods-Keep Movin";
+			productName = "Pods-Keep Movin";
+			productReference = FF7C0925CC87D8BCD7F461AACEAD5838 /* Pods_Keep_Movin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B017076431CED0806BCDE7572FD5AD3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEFE3356581BCEBE26A0124350880E6E /* Pods-Keep Movin */,
+				B03E0F01072350D0A6CD0C19D1C60A37 /* SteviaLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B525FE98D50C4682508E207E3BC48614 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E5FA27ACB15A7D64268A17F5D6DD76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		185DFDDFA70BAC9EEFCEF137D73BDCA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1319E92CA7CFA14FF426AAA34F5076F /* Stevia+Alignment.swift in Sources */,
+				8BBCB37CAEF22E6A4A9866B0679E4D38 /* Stevia+Baselines.swift in Sources */,
+				09AB29E53DAC89BA48801D361E6337AF /* Stevia+Center.swift in Sources */,
+				8E57BA085FA9DB4D16A2C8B922D6E310 /* Stevia+Constraints.swift in Sources */,
+				FC274C12B391771D22BF38990BC71292 /* Stevia+Content.swift in Sources */,
+				FA7CBBE2FE5D94D1C21A563FF693A751 /* Stevia+DoubleDash.swift in Sources */,
+				C2D87B4D3D2AFBF0FBB852E0D2BCA995 /* Stevia+Equation.swift in Sources */,
+				4E422BF3DFD320D3CE49B99AE53C7843 /* Stevia+Fill.swift in Sources */,
+				4462B503E824473DFFB7BDF8F3EE3F69 /* Stevia+FlexibleMargin.swift in Sources */,
+				CA2E353E4884CD6CCE8A806F19469931 /* Stevia+GetConstraint.swift in Sources */,
+				8601F2EB7DA2768034085676AC201DB6 /* Stevia+Hierarchy.swift in Sources */,
+				E7B36C30FAFAB0D085B87260857E043E /* Stevia+LayoutAnchors.swift in Sources */,
+				4279D828D3F0A333EFF4F4E0EC73587B /* Stevia+Notifications.swift in Sources */,
+				60E1EFF56DFE9418F2E8BDDABC5AD319 /* Stevia+Operators.swift in Sources */,
+				09C163B7B20745198AD2240B8D7BA59D /* Stevia+Percentage.swift in Sources */,
+				9D8F8C25D8AE060D1C73DA08EE70AEA6 /* Stevia+Position.swift in Sources */,
+				A23AC7DF3E955E5B6CEE27FCE5B2CF8C /* Stevia+Size.swift in Sources */,
+				6F9828761A378189AFBD853F8F3987DA /* Stevia+Stacks.swift in Sources */,
+				E96D21093AE8689D54B8C20E302C64FC /* Stevia+Style.swift in Sources */,
+				B41A4BC8EF655B973D114F091DA897EB /* SteviaLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAA2D39570EE1E2F6B0CCAFF9F2FB8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43758ADAF64D578E7E5A3BB680AE6447 /* Pods-Keep Movin-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F34FFC863727D604512FEA5EF14D4754 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SteviaLayout;
+			target = B03E0F01072350D0A6CD0C19D1C60A37 /* SteviaLayout */;
+			targetProxy = 3206DF0D3BFCF832D5E1ECD1EE5B6779 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		349B260FC53026036E75F36511D981C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3D24D98FFC4834BD6CE97281294FEE53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D402D8F34778A6F0564C645A23889B69 /* SteviaLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SteviaLayout/SteviaLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SteviaLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SteviaLayout/SteviaLayout.modulemap";
+				PRODUCT_MODULE_NAME = Stevia;
+				PRODUCT_NAME = Stevia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8E3ECD21672FF896B7A27C6058F5A90F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FDE8B3BDA527C451A68A033C8C103A4 /* Pods-Keep Movin.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Keep Movin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Keep Movin/Pods-Keep Movin.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9394D260877B43A09C9798F315A792D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		99C6A5B156E622BEC72B7C95E9989281 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6229672E62712084BDE1A4A3B7E24371 /* Pods-Keep Movin.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Keep Movin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Keep Movin/Pods-Keep Movin.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A90EEDC94E1C853F8CEE89FF5BA14026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D402D8F34778A6F0564C645A23889B69 /* SteviaLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SteviaLayout/SteviaLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SteviaLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SteviaLayout/SteviaLayout.modulemap";
+				PRODUCT_MODULE_NAME = Stevia;
+				PRODUCT_NAME = Stevia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CAA25FCAF4CBA51137DA910603A8DA2 /* Build configuration list for PBXNativeTarget "Pods-Keep Movin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E3ECD21672FF896B7A27C6058F5A90F /* Debug */,
+				99C6A5B156E622BEC72B7C95E9989281 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				349B260FC53026036E75F36511D981C4 /* Debug */,
+				9394D260877B43A09C9798F315A792D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34563A60C1C4CC34A3C51B706C332773 /* Build configuration list for PBXNativeTarget "SteviaLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D24D98FFC4834BD6CE97281294FEE53 /* Debug */,
+				A90EEDC94E1C853F8CEE89FF5BA14026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

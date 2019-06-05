@@ -1,0 +1,6 @@
+framework module Pods_Keep_Movin {
+  umbrella header "Pods-Keep Movin-umbrella.h"
+
+  export *
+  module * { export * }
+}

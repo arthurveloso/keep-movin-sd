@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46251F74B5C9FD119A5B5C41 /* Pods_Keep_Movin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CA0F5FCF5B009DD100FD29 /* Pods_Keep_Movin.framework */; };
+		67668F9F22A7837C00224777 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668F9E22A7837C00224777 /* UIColor+Colors.swift */; };
 		679BD5C922A7524E00825D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679BD5C822A7524E00825D99 /* AppDelegate.swift */; };
 		679BD5CB22A7524E00825D99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679BD5CA22A7524E00825D99 /* HomeViewController.swift */; };
 		679BD5CD22A7524E00825D99 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679BD5CC22A7524E00825D99 /* SecondViewController.swift */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44F6EF8A5488038A2E6BEF46 /* Pods-Keep Movin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep Movin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Keep Movin/Pods-Keep Movin.release.xcconfig"; sourceTree = "<group>"; };
+		538A04B15ACB5BAC685A2CAF /* Pods-Keep Movin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep Movin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keep Movin/Pods-Keep Movin.debug.xcconfig"; sourceTree = "<group>"; };
+		67668F9E22A7837C00224777 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		679BD5C522A7524E00825D99 /* Keep Movin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keep Movin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		679BD5C822A7524E00825D99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		679BD5CA22A7524E00825D99 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		679BD5D122A7524F00825D99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		679BD5D422A7524F00825D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		679BD5D622A7524F00825D99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90CA0F5FCF5B009DD100FD29 /* Pods_Keep_Movin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keep_Movin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46251F74B5C9FD119A5B5C41 /* Pods_Keep_Movin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FEB77DEA71F3D692A70E6E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				538A04B15ACB5BAC685A2CAF /* Pods-Keep Movin.debug.xcconfig */,
+				44F6EF8A5488038A2E6BEF46 /* Pods-Keep Movin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		362FEA8EBF321B551F4B0EAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90CA0F5FCF5B009DD100FD29 /* Pods_Keep_Movin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		679BD5BC22A7524D00825D99 = {
 			isa = PBXGroup;
 			children = (
 				679BD5C722A7524E00825D99 /* Keep Movin */,
 				679BD5C622A7524E00825D99 /* Products */,
+				2FEB77DEA71F3D692A70E6E4 /* Pods */,
+				362FEA8EBF321B551F4B0EAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +89,7 @@
 				679BD5D122A7524F00825D99 /* Assets.xcassets */,
 				679BD5D322A7524F00825D99 /* LaunchScreen.storyboard */,
 				679BD5D622A7524F00825D99 /* Info.plist */,
+				67668F9E22A7837C00224777 /* UIColor+Colors.swift */,
 			);
 			path = "Keep Movin";
 			sourceTree = "<group>";
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 679BD5D922A7524F00825D99 /* Build configuration list for PBXNativeTarget "Keep Movin" */;
 			buildPhases = (
+				E1DAA9C4CD80633FE4D637C4 /* [CP] Check Pods Manifest.lock */,
 				679BD5C122A7524E00825D99 /* Sources */,
 				679BD5C222A7524E00825D99 /* Frameworks */,
 				679BD5C322A7524E00825D99 /* Resources */,
+				879E10599480C67FF6990EEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +162,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		879E10599480C67FF6990EEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Keep Movin/Pods-Keep Movin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Keep Movin/Pods-Keep Movin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1DAA9C4CD80633FE4D637C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Keep Movin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		679BD5C122A7524E00825D99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				679BD5CD22A7524E00825D99 /* SecondViewController.swift in Sources */,
+				67668F9F22A7837C00224777 /* UIColor+Colors.swift in Sources */,
 				679BD5C922A7524E00825D99 /* AppDelegate.swift in Sources */,
 				679BD5CB22A7524E00825D99 /* HomeViewController.swift in Sources */,
 			);
@@ -284,6 +361,7 @@
 		};
 		679BD5DA22A7524F00825D99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 538A04B15ACB5BAC685A2CAF /* Pods-Keep Movin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +380,7 @@
 		};
 		679BD5DB22A7524F00825D99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44F6EF8A5488038A2E6BEF46 /* Pods-Keep Movin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

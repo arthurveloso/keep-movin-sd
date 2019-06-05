@@ -7,13 +7,12 @@
 //
 
 import UIKit
+import Stevia
 
 class HomeViewController: UIViewController {
     
     let helloText = "Olá, Arthur"
     let message = "Sua atividade"
-    let navBarColor = UIColor(red: 217/255, green: 4/255, blue: 41/255, alpha: 1.0)
-    let cellColor = UIColor(red: 239/255, green: 35/255, blue: 60/255, alpha: 1.0)
     
     @IBOutlet weak var cardsCollectionView: UICollectionView!
     
@@ -39,7 +38,7 @@ class HomeViewController: UIViewController {
             NSAttributedString.Key.font : UIFont.preferredFont(forTextStyle: .largeTitle)
         ]
         
-        self.navigationController?.navigationBar.barTintColor = navBarColor
+        self.navigationController?.navigationBar.barTintColor = UIColor().navBarColor()
         
         for navItem in(navigationController?.navigationBar.subviews)! {
             for itemSubView in navItem.subviews {
@@ -59,7 +58,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: performanceCellId, for: indexPath) as! PerformanceCell
-        cell.backgroundColor = cellColor
+        cell.backgroundColor = UIColor().cellColor()
         return cell
     }
     
@@ -96,8 +95,16 @@ class PerformanceCell: UICollectionViewCell {
     }
     
     func setupViews() {
+        let todayLabel = UILabel()
+        sv(todayLabel)
+        todayLabel.top(10).left(10).right(10)
+        todayLabel.text = "Hoje"
+        todayLabel.textAlignment = .center
+        todayLabel.textColor = .white
+        todayLabel.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+
         let shapeLayer = CAShapeLayer()
-        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -(CGFloat.pi / 2), endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: CGPoint(x: 150,y: 175), radius: 100, startAngle: -(CGFloat.pi / 2), endAngle: 2 * CGFloat.pi, clockwise: true)
         shapeLayer.path = circularPath.cgPath
         shapeLayer.strokeColor = UIColor.white.cgColor
         shapeLayer.lineWidth = 20
@@ -120,6 +127,19 @@ class PerformanceCell: UICollectionViewCell {
         basicAnimation.fillMode = .forwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "")
+        
+        let progressLabel = UILabel()
+        sv(progressLabel)
+        let attributedText = NSMutableAttributedString()
+        let stepsString = NSAttributedString(string: "14305", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 24, weight: .semibold)])
+        let descriptionString = NSAttributedString(string: "\npassos", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20, weight: .light)])
+        attributedText.append(stepsString)
+        attributedText.append(descriptionString)
+        progressLabel.attributedText = attributedText
+        progressLabel.textAlignment = .center
+        progressLabel.numberOfLines = 2
+        progressLabel.textColor = .white
+        progressLabel.centerInContainer()
     }
 
     required init?(coder aDecoder: NSCoder) {
