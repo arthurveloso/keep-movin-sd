@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		46251F74B5C9FD119A5B5C41 /* Pods_Keep_Movin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CA0F5FCF5B009DD100FD29 /* Pods_Keep_Movin.framework */; };
+		6746720522A86515007F537F /* PerformanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6746720422A86515007F537F /* PerformanceCell.swift */; };
+		6746720722A86603007F537F /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6746720622A86603007F537F /* RankingCell.swift */; };
+		6746720C22A87A01007F537F /* KMCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6746720B22A87A01007F537F /* KMCards.swift */; };
 		67668F9F22A7837C00224777 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668F9E22A7837C00224777 /* UIColor+Colors.swift */; };
 		679BD5C922A7524E00825D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679BD5C822A7524E00825D99 /* AppDelegate.swift */; };
 		679BD5CB22A7524E00825D99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679BD5CA22A7524E00825D99 /* HomeViewController.swift */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		44F6EF8A5488038A2E6BEF46 /* Pods-Keep Movin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep Movin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Keep Movin/Pods-Keep Movin.release.xcconfig"; sourceTree = "<group>"; };
 		538A04B15ACB5BAC685A2CAF /* Pods-Keep Movin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep Movin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keep Movin/Pods-Keep Movin.debug.xcconfig"; sourceTree = "<group>"; };
+		6746720422A86515007F537F /* PerformanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceCell.swift; sourceTree = "<group>"; };
+		6746720622A86603007F537F /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
+		6746720B22A87A01007F537F /* KMCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMCards.swift; sourceTree = "<group>"; };
 		67668F9E22A7837C00224777 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		679BD5C522A7524E00825D99 /* Keep Movin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keep Movin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		679BD5C822A7524E00825D99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6746720822A873B1007F537F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6746720422A86515007F537F /* PerformanceCell.swift */,
+				6746720622A86603007F537F /* RankingCell.swift */,
+				6746720B22A87A01007F537F /* KMCards.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6746720922A873CD007F537F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				679BD5CA22A7524E00825D99 /* HomeViewController.swift */,
+				679BD5CC22A7524E00825D99 /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6746720A22A873DB007F537F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				679BD5CE22A7524E00825D99 /* Main.storyboard */,
+				679BD5D322A7524F00825D99 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		679BD5BC22A7524D00825D99 = {
 			isa = PBXGroup;
 			children = (
@@ -82,14 +116,13 @@
 		679BD5C722A7524E00825D99 /* Keep Movin */ = {
 			isa = PBXGroup;
 			children = (
+				6746720A22A873DB007F537F /* Storyboards */,
+				6746720922A873CD007F537F /* Controllers */,
+				6746720822A873B1007F537F /* Cells */,
 				679BD5C822A7524E00825D99 /* AppDelegate.swift */,
-				679BD5CA22A7524E00825D99 /* HomeViewController.swift */,
-				679BD5CC22A7524E00825D99 /* SecondViewController.swift */,
-				679BD5CE22A7524E00825D99 /* Main.storyboard */,
-				679BD5D122A7524F00825D99 /* Assets.xcassets */,
-				679BD5D322A7524F00825D99 /* LaunchScreen.storyboard */,
-				679BD5D622A7524F00825D99 /* Info.plist */,
 				67668F9E22A7837C00224777 /* UIColor+Colors.swift */,
+				679BD5D122A7524F00825D99 /* Assets.xcassets */,
+				679BD5D622A7524F00825D99 /* Info.plist */,
 			);
 			path = "Keep Movin";
 			sourceTree = "<group>";
@@ -214,7 +247,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6746720C22A87A01007F537F /* KMCards.swift in Sources */,
+				6746720522A86515007F537F /* PerformanceCell.swift in Sources */,
 				679BD5CD22A7524E00825D99 /* SecondViewController.swift in Sources */,
+				6746720722A86603007F537F /* RankingCell.swift in Sources */,
 				67668F9F22A7837C00224777 /* UIColor+Colors.swift in Sources */,
 				679BD5C922A7524E00825D99 /* AppDelegate.swift in Sources */,
 				679BD5CB22A7524E00825D99 /* HomeViewController.swift in Sources */,
