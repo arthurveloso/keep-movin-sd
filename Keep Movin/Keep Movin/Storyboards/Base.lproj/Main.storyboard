@@ -135,14 +135,40 @@
                     <view key="view" contentMode="scaleToFill" id="Vf4-0b-e4s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d3u-Ce-iNM">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5rP-V7-8eo">
+                                    <size key="itemSize" width="414" height="307"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pzl-3R-hUT" id="LUa-Zz-CZV"/>
+                                    <outlet property="delegate" destination="Pzl-3R-hUT" id="kjr-MG-efY"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d3u-Ce-iNM" firstAttribute="top" secondItem="AKk-Av-Caa" secondAttribute="top" id="HM5-Vw-5BB"/>
+                            <constraint firstItem="d3u-Ce-iNM" firstAttribute="bottom" secondItem="AKk-Av-Caa" secondAttribute="bottom" id="Qfr-31-4BZ"/>
+                            <constraint firstItem="d3u-Ce-iNM" firstAttribute="leading" secondItem="Vf4-0b-e4s" secondAttribute="leading" id="TkE-a1-HHl"/>
+                            <constraint firstAttribute="trailing" secondItem="d3u-Ce-iNM" secondAttribute="trailing" id="zEr-vj-UYD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AKk-Av-Caa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RpU-mP-Sxj"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="RpU-mP-Sxj"/>
+                    <connections>
+                        <outlet property="productsCollectionView" destination="d3u-Ce-iNM" id="Uii-os-1P4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmU-Eg-Edm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626.08695652173913" y="994.41964285714278"/>
+            <point key="canvasLocation" x="624.63768115942037" y="994.41964285714278"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

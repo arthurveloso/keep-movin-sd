@@ -13,6 +13,7 @@ class RankingCell: KMCards {
 
     var rankingTableView = UITableView()
     let rankingCellId = "rankingCell"
+    let friends = ["Victor", "Eu", "Rodrigo", "Nickson", "Marcos"]
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -39,7 +40,7 @@ class RankingCell: KMCards {
 
 extension RankingCell: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return friends.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,7 +55,7 @@ extension RankingCell: UITableViewDataSource, UITableViewDelegate {
         let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: rankingCellId)
         cell.backgroundColor = .clear
         cell.textLabel?.textColor = .white
-        cell.textLabel?.text = "Rodrigo"
+        cell.textLabel?.text = friends[indexPath.row]
         
         return cell
     }
