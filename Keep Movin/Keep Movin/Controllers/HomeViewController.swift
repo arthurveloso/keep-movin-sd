@@ -30,32 +30,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        setupNavBar()
+        setupNavBar(helloText: helloText, message: message)
         cardsCollectionView.register(PerformanceCell.self, forCellWithReuseIdentifier: performanceCellId)
         cardsCollectionView.register(RankingCell.self, forCellWithReuseIdentifier: rankingCellId)
-    }
-    
-    func setupNavBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationItem.largeTitleDisplayMode = .automatic
-        
-        self.title = helloText + "\n" + message
-        
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font : UIFont.preferredFont(forTextStyle: .largeTitle)
-        ]
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor().navBarColor()
-        
-        for navItem in(navigationController?.navigationBar.subviews)! {
-            for itemSubView in navItem.subviews {
-                if let largeLabel = itemSubView as? UILabel {
-                    largeLabel.text = self.title
-                    largeLabel.numberOfLines = 2
-                }
-            }
-        }
     }
 }
 
