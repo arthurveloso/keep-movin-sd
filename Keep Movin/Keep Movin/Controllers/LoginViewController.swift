@@ -33,7 +33,7 @@ class LoginViewController: UIViewController{
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setupNavBar(helloText: "Keep Movin`", message: "")
+        setupNavBar(helloText: "Keep Movin'", message: "")
     }
     
     private func style(){
