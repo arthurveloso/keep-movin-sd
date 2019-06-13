@@ -56,7 +56,7 @@ class CorporeInformationViewController: UIViewController {
                self.GenreTextField,
                self.SaveButton)
         
-        self.ProfileImageView.heightEqualsWidth().width(50%).centerHorizontally().Top == nav.safeAreaLayoutGuide.Top
+        self.ProfileImageView.heightEqualsWidth().width(50%).centerHorizontally().Top == nav.safeAreaLayoutGuide.Top + 30
         
         self.AgeTextField.centerHorizontally().width(90%).height(40).Top == ProfileImageView.Bottom + 30
         

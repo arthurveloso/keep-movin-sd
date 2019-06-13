@@ -36,6 +36,9 @@
                                 <rect key="frame" x="184" y="640" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="eep-J5-y0q" kind="showDetail" id="so5-SO-tnU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phy-8t-hhl">
                                 <rect key="frame" x="186" y="706" width="42" height="21"/>
@@ -60,9 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xKe-Y6-2Ja"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Okn-Rs-mTk">
-                        <barButtonItem key="backBarButtonItem" title="Cadastro" id="oak-GF-k0q"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Okn-Rs-mTk"/>
                     <connections>
                         <outlet property="IconImageView" destination="MTU-bA-xMK" id="eZL-fe-tRS"/>
                         <outlet property="LogInButton" destination="pcE-Mm-9bZ" id="5nK-vm-IEI"/>
@@ -178,6 +179,9 @@
                                 <rect key="frame" x="184" y="689" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="eep-J5-y0q" kind="showDetail" id="ZCO-GI-QcQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-GK-QSf">
                                 <rect key="frame" x="159" y="569" width="97" height="30"/>
@@ -202,6 +206,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvq-zK-9OR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3028.985507246377" y="148.66071428571428"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="n8y-6T-Ugr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="eep-J5-y0q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yl7-fd-Ob6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2070" y="680"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rT8-88-GGO">
@@ -228,4 +240,7 @@
             <point key="canvasLocation" x="186.95652173913044" y="148.66071428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="so5-SO-tnU"/>
+    </inferredMetricsTieBreakers>
 </document>
