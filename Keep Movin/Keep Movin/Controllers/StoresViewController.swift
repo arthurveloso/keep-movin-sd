@@ -13,7 +13,7 @@ class StoresViewController: UIViewController {
     let helloText = "Olá, Arthur"
     let message = "Seus pontos: 4890"
     let productCellId = "productCell"
-    let stores = ["Centauro", "Netshoes"]
+    let stores = [["nome": "Centauro", "produto": "tenis", "descricao": "De 229,99 por 199,99 + 15 mil pontos"], ["nome": "Netshoes", "produto": "natacao", "descricao": "De 59,99 por 29,99 + 10 mil pontos"]]
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
     
@@ -32,7 +32,10 @@ extension StoresViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productCellId, for: indexPath) as! ProductCell
-//        cell.storeImage = UIImageView(image: UIImage(named: stores[indexPath.row]))
+        cell.storeImage.image = UIImage(named: stores[indexPath.row]["nome"]!)
+        cell.storeName.text = stores[indexPath.row]["nome"]!
+        cell.productImage.image = UIImage(named: stores[indexPath.row]["produto"]!)
+        cell.productDescription.text = stores[indexPath.row]["descricao"]!
         return cell
     }
     

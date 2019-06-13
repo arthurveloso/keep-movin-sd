@@ -11,9 +11,10 @@ import UIKit
 extension UIViewController {
     func setupNavBar(helloText: String, message: String) {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationItem.largeTitleDisplayMode = .automatic
-        
+
         self.title = helloText + "\n" + message
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,

@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     
     let performanceCellId = "performance"
     let rankingCellId = "ranking"
+    let stickersCellId = "stickers"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +34,13 @@ class HomeViewController: UIViewController {
         setupNavBar(helloText: helloText, message: message)
         cardsCollectionView.register(PerformanceCell.self, forCellWithReuseIdentifier: performanceCellId)
         cardsCollectionView.register(RankingCell.self, forCellWithReuseIdentifier: rankingCellId)
+        cardsCollectionView.register(StickersCell.self, forCellWithReuseIdentifier: stickersCellId)
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -53,6 +55,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let rankingCell = collectionView.dequeueReusableCell(withReuseIdentifier: rankingCellId,
                                                                      for: indexPath) as! RankingCell
             return rankingCell
+        case .Stickers:
+            let stickersCell = collectionView.dequeueReusableCell(withReuseIdentifier: stickersCellId, for: indexPath) as! StickersCell
+            return stickersCell
         default:
             return UICollectionViewCell()
         }
