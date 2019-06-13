@@ -21,6 +21,7 @@ extension UIViewController {
         ]
         
         self.navigationController?.navigationBar.barTintColor = UIColor().navBarColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
         for navItem in(navigationController?.navigationBar.subviews)! {
             for itemSubView in navItem.subviews {
@@ -31,4 +32,5 @@ extension UIViewController {
             }
         }
     }
+    
 }

@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window?.tintColor = UIColor().cellColor()
 
-        let tabBar = self.window?.rootViewController as! UITabBarController
-        tabBar.selectedIndex = 1
-
+        if let tabBar = self.window?.rootViewController as? UITabBarController {
+            tabBar.selectedIndex = 1
+        }
         return true
     }
 
