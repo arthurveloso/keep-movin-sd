@@ -22,6 +22,7 @@
 		679BD5D022A7524E00825D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679BD5CE22A7524E00825D99 /* Main.storyboard */; };
 		679BD5D222A7524F00825D99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679BD5D122A7524F00825D99 /* Assets.xcassets */; };
 		679BD5D522A7524F00825D99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679BD5D322A7524F00825D99 /* LaunchScreen.storyboard */; };
+		C432368822B91D6000E1A2FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C432368722B91D6000E1A2FF /* GoogleService-Info.plist */; };
 		C46074A022B1224000285863 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C460749F22B1224000285863 /* Login.storyboard */; };
 		C46074A222B1474600285863 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46074A122B1474600285863 /* LoginViewController.swift */; };
 		C4C430C522B1796C00BC77BF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C430C422B1796C00BC77BF /* RegisterViewController.swift */; };
@@ -48,6 +49,7 @@
 		679BD5D422A7524F00825D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		679BD5D622A7524F00825D99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90CA0F5FCF5B009DD100FD29 /* Pods_Keep_Movin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keep_Movin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C432368722B91D6000E1A2FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C460749F22B1224000285863 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C46074A122B1474600285863 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C4C430C422B1796C00BC77BF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				679BD5C822A7524E00825D99 /* AppDelegate.swift */,
 				679BD5D122A7524F00825D99 /* Assets.xcassets */,
 				679BD5D622A7524F00825D99 /* Info.plist */,
+				C432368722B91D6000E1A2FF /* GoogleService-Info.plist */,
 			);
 			path = "Keep Movin";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				C46074A022B1224000285863 /* Login.storyboard in Resources */,
 				679BD5D522A7524F00825D99 /* LaunchScreen.storyboard in Resources */,
+				C432368822B91D6000E1A2FF /* GoogleService-Info.plist in Resources */,
 				679BD5D222A7524F00825D99 /* Assets.xcassets in Resources */,
 				679BD5D022A7524E00825D99 /* Main.storyboard in Resources */,
 			);
@@ -238,13 +242,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Keep Movin/Pods-Keep Movin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

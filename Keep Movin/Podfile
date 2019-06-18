@@ -7,5 +7,6 @@ target 'Keep Movin' do
 
   # Pods for Keep Movin
   pod 'SteviaLayout'  
+  pod 'Firebase/Core'
 
 end
