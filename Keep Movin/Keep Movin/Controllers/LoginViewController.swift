@@ -8,6 +8,7 @@
 
 import UIKit
 import Stevia
+import Firebase
 
 class LoginViewController: UIViewController{
     
@@ -40,7 +41,7 @@ class LoginViewController: UIViewController{
         
         IconImageView.image = UIImage(named: "loog")
         
-        UserTextField.placeholder = "User"
+        UserTextField.placeholder = "Email"
         UserTextField.keyboardType = .emailAddress
         
         PasswordTextField.placeholder = "Password"
@@ -50,6 +51,8 @@ class LoginViewController: UIViewController{
         LogInButton.tintColor = .white
         LogInButton.layer.cornerRadius = 10
         LogInButton.layer.backgroundColor = UIColor().navBarColor().cgColor
+        
+        LogInButton.addTarget(self, action: #selector(checkUser), for: .touchUpInside)
         
         OrLabel.text("or")
         
@@ -80,6 +83,33 @@ class LoginViewController: UIViewController{
         self.OrLabel.centerHorizontally().Bottom == SignUpButton.Top - 10
         
         self.SignUpButton.bottom(5%).centerHorizontally().width(50%).height(40)
+        
+    }
+    
+    @objc func checkUser(){
+        
+        guard let userName = UserTextField.text, let password = PasswordTextField.text else {
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: userName, password: password, completion: {
+            (authResult, error) in
+            
+            guard let user = authResult?.user else {
+                
+                // notifications com os possiveis erros
+                
+                return
+                
+            }
+            
+            guard let page = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else {
+                return
+            }
+            
+            self.showDetailViewController(page, sender: nil)
+            
+        })
         
     }
     

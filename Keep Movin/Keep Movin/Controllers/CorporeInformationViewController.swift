@@ -76,7 +76,7 @@ class CorporeInformationViewController: UIViewController {
             
             guard let page = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return }
             
-            self.show(page, sender: nil)
+            self.showDetailViewController(page, sender: nil)
             
         })
         
