@@ -8,6 +8,7 @@
 
 import UIKit
 import Stevia
+import Firebase
 
 class CorporeInformationViewController: UIViewController {
     
@@ -17,6 +18,12 @@ class CorporeInformationViewController: UIViewController {
     @IBOutlet weak var WeightTextField: UITextField!
     @IBOutlet weak var GenreTextField: UITextField!
     @IBOutlet weak var SaveButton: UIButton!
+    
+    var userName : String = ""
+    var email : String = ""
+    var password : String = ""
+    var ref : DatabaseReference!
+    var user : User!
     
     override func viewDidLoad() {
         self.style()
@@ -43,6 +50,35 @@ class CorporeInformationViewController: UIViewController {
         SaveButton.tintColor = .white
         SaveButton.layer.cornerRadius = 10
         SaveButton.layer.backgroundColor = UIColor().navBarColor().cgColor
+        
+        SaveButton.addTarget(self, action: #selector(firebaseRequest), for: .touchUpInside)
+        
+    }
+    
+    @objc func firebaseRequest(){
+            
+        guard let age = self.AgeTextField.text, let height = self.HeightTextField.text, let weight = self.WeightTextField.text, let genre = self.GenreTextField.text else{ return }
+        
+        let dictionary = ["userName" : self.userName,
+                            "Email" : self.email,
+                            "Age" : age,
+                            "Height" : height,
+                            "Weight" : weight,
+                            "Genre" : genre]
+        
+        self.ref.child("Users").child(user.uid).setValue(dictionary, withCompletionBlock: {
+            (error, dataRef) in
+            
+            if error != nil{
+                print(error)
+                return
+            }
+            
+            guard let page = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return }
+            
+            self.show(page, sender: nil)
+            
+        })
         
     }
     

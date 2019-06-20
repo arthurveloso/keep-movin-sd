@@ -121,9 +121,6 @@
                                 <rect key="frame" x="184" y="746" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="myv-8j-Reu" kind="show" id="fS0-Ao-s75"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -145,7 +142,7 @@
         <!--Corpore Information View Controller-->
         <scene sceneID="sGW-eQ-XfD">
             <objects>
-                <viewController id="myv-8j-Reu" customClass="CorporeInformationViewController" customModule="Keep_Movin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CorporeInformationViewController" id="myv-8j-Reu" customClass="CorporeInformationViewController" customModule="Keep_Movin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dxo-Wt-bmE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,9 +176,6 @@
                                 <rect key="frame" x="184" y="689" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="eep-J5-y0q" kind="showDetail" id="ZCO-GI-QcQ"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-GK-QSf">
                                 <rect key="frame" x="159" y="569" width="97" height="30"/>
@@ -240,7 +234,4 @@
             <point key="canvasLocation" x="186.95652173913044" y="148.66071428571428"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="so5-SO-tnU"/>
-    </inferredMetricsTieBreakers>
 </document>

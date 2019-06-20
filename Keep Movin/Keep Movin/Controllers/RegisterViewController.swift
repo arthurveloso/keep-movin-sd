@@ -8,6 +8,7 @@
 
 import UIKit
 import Stevia
+import Firebase
 
 class RegisterViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var RePasswordTextField: UITextField!
     @IBOutlet weak var NextButton: UIButton!
     
+    var ref = Database.database().reference()
     
     override func viewDidLoad() {
         
@@ -75,6 +77,49 @@ class RegisterViewController: UIViewController {
         self.RePasswordTextField.centerHorizontally().width(90%).height(40).Top == PasswordTextField.Bottom + 15
         
          self.NextButton.bottom(5%).centerHorizontally().width(50%).height(40)
+        
+        self.NextButton.addTarget(self, action: #selector(continueLogin), for: .touchUpInside)
+    }
+    
+    @objc func continueLogin(){
+        
+        guard let userName = NameTextField.text, let email = EmailTextField.text, let password  = PasswordTextField.text, let rePassword = RePasswordTextField.text else {
+            
+            // Criar notification que algum campo esta em branco
+            
+            return
+        }
+        
+        if password != rePassword{
+            
+            // criar notificacao que as senhas sao diferentes
+            
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password){
+            (authResult, error) in
+            
+            guard let user = authResult?.user else {
+                
+                //criar notificacoa para os possiveis erros de autenticacao
+                
+                return
+                
+            }
+            
+            guard let corporeInfomation = UIStoryboard.init(name: "Login", bundle: Bundle.main).instantiateViewController(withIdentifier: "CorporeInformationViewController") as? CorporeInformationViewController else { return }
+            
+            
+            corporeInfomation.ref = self.ref
+            corporeInfomation.userName = userName
+            corporeInfomation.email = email
+            corporeInfomation.user = user
+            
+            self.navigationController?.pushViewController(corporeInfomation, animated: true)
+            
+        }
+        
     }
     
 }
