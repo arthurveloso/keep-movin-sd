@@ -56,7 +56,9 @@ class CorporeInformationViewController: UIViewController {
     }
     
     @objc func firebaseRequest(){
-            
+        
+        Database.database().reference(withPath: "users")
+        
         guard let age = self.AgeTextField.text, let height = self.HeightTextField.text, let weight = self.WeightTextField.text, let genre = self.GenreTextField.text else{ return }
         
         let dictionary = ["userName" : self.userName,

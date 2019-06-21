@@ -8,6 +8,7 @@
 
 import UIKit
 import Stevia
+import CoreMotion
 
 class HomeViewController: UIViewController {
     
@@ -26,15 +27,39 @@ class HomeViewController: UIViewController {
     let performanceCellId = "performance"
     let rankingCellId = "ranking"
     let stickersCellId = "stickers"
+    let pedometer = CMPedometer()
+    var steps: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         setupNavBar(helloText: helloText, message: message)
         cardsCollectionView.register(PerformanceCell.self, forCellWithReuseIdentifier: performanceCellId)
         cardsCollectionView.register(RankingCell.self, forCellWithReuseIdentifier: rankingCellId)
         cardsCollectionView.register(StickersCell.self, forCellWithReuseIdentifier: stickersCellId)
+        setupPedometer()
+    }
+    
+    func setupPedometer() {
+        let calendar = Calendar.current
+        
+        pedometer.queryPedometerData(from: calendar.startOfDay(for: Date()), to: Date()) { (data, error) in
+            if data != nil {
+                DispatchQueue.main.async {
+                    self.steps = "\(data!.numberOfSteps)"
+                    self.cardsCollectionView.reloadData()
+                }
+            }
+        }
+        
+        pedometer.startUpdates(from: calendar.startOfDay(for: Date())) { (data, error) in
+            if data != nil {
+                DispatchQueue.main.async {
+                    self.steps = "\(data!.numberOfSteps)"
+                    self.cardsCollectionView.reloadData()
+                }
+            }
+        }
     }
 }
 
@@ -50,10 +75,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case .Performance:
             let performanceCell = collectionView.dequeueReusableCell(withReuseIdentifier: performanceCellId,
                                                                      for: indexPath) as! PerformanceCell
+            performanceCell.progressLabel.text = "Sem dados"
+            if let stepsText = steps {
+                let attributedText = NSMutableAttributedString()
+                let stepsString = NSAttributedString(string: stepsText, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 24, weight: .semibold)])
+                let descriptionString = NSAttributedString(string: "\npassos", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20, weight: .light)])
+                attributedText.append(stepsString)
+                attributedText.append(descriptionString)
+                performanceCell.progressLabel.attributedText = attributedText
+            }
             return performanceCell
         case .Ranking:
             let rankingCell = collectionView.dequeueReusableCell(withReuseIdentifier: rankingCellId,
-                                                                     for: indexPath) as! RankingCell
+                                                                 for: indexPath) as! RankingCell
             return rankingCell
         case .Stickers:
             let stickersCell = collectionView.dequeueReusableCell(withReuseIdentifier: stickersCellId, for: indexPath) as! StickersCell

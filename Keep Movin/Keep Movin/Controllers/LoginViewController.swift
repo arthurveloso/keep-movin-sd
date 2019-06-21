@@ -94,14 +94,21 @@ class LoginViewController: UIViewController{
         
         Auth.auth().signIn(withEmail: userName, password: password, completion: {
             (authResult, error) in
-            
-            guard let user = authResult?.user else {
+            if let error = error, authResult == nil {
+                let alert = UIAlertController(title: "Sign In Failed", message: error.localizedDescription, preferredStyle: .alert)
                 
-                // notifications com os possiveis erros
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
                 
-                return
-                
+                self.present(alert, animated: true, completion: nil)
             }
+            
+//            guard let user = authResult?.user else {
+//
+//                // notifications com os possiveis erros
+//
+//                return
+//
+//            }
             
             guard let page = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else {
                 return

@@ -9,13 +9,16 @@
 import UIKit
 
 class PerformanceCell: KMCards {
+    
+    let todayLabel = UILabel()
+    let progressLabel = UILabel()
+    var didLayoutSubview = false
     override func layoutSubviews() {
         super.layoutSubviews()
         setupViews()
     }
     
     func setupViews() {
-        let todayLabel = UILabel()
         sv(todayLabel)
         todayLabel.top(10).left(10).right(10)
         todayLabel.text = "Hoje"
@@ -48,14 +51,7 @@ class PerformanceCell: KMCards {
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "")
         
-        let progressLabel = UILabel()
         sv(progressLabel)
-        let attributedText = NSMutableAttributedString()
-        let stepsString = NSAttributedString(string: "14305", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 24, weight: .semibold)])
-        let descriptionString = NSAttributedString(string: "\npassos", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20, weight: .light)])
-        attributedText.append(stepsString)
-        attributedText.append(descriptionString)
-        progressLabel.attributedText = attributedText
         progressLabel.textAlignment = .center
         progressLabel.numberOfLines = 2
         progressLabel.textColor = .white
