@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
-        
+        IQKeyboardManager.shared.enable = true
         guard let home = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return true }
         
         self.window?.rootViewController = home
@@ -37,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.rootViewController = login
             }
         }
+        
+        
         
         return true
     }
