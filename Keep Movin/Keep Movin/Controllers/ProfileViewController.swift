@@ -8,15 +8,18 @@
 
 import UIKit
 import Stevia
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
-
+    
     let helloText = "Olá, Arthur"
     let message = "Seu perfil"
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var profileInfoTableView: UITableView!
-
+    @IBOutlet weak var logoutButton: UIButton!
+    var currentUser: KMUser?
+    
     enum Infos: Int {
         case Age
         case Gender
@@ -29,16 +32,43 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupNavBar(helloText: helloText, message: message)
-        setupViews()
+        UsersManager.shared.getCurrentUser { (user) in
+            if user != nil {
+                self.currentUser = user!
+                self.setupViews()
+                self.profileInfoTableView.reloadData()
+            }
+        }
     }
     
     func setupViews() {
-        profileNameLabel.text = "Arthur Melo"
         profileNameLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
         profileImageView.clipsToBounds = true
         
+        logoutButton.layer.borderWidth = 1.0
+        logoutButton.layer.borderColor = UIColor().cellColor().cgColor
+        logoutButton.layer.cornerRadius = 5
+        logoutButton.layer.masksToBounds = true
+        logoutButton.addTarget(self, action: #selector(logoutPressed), for: .touchUpInside)
+        
+        if let user = currentUser {
+            profileNameLabel.text = user.username
+            
+        } else {
+            profileNameLabel.text = "No user name"
+        }
+    }
+    
+    @objc func logoutPressed() {
+        do {
+            try Auth.auth().signOut()
+            guard let login = UIStoryboard.init(name: "Login", bundle: Bundle.main).instantiateInitialViewController() else { return }
+            UIApplication.shared.keyWindow?.rootViewController = login
+        } catch {
+            print("Error")
+        }
     }
 }
 
@@ -51,12 +81,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         guard let info = Infos(rawValue: indexPath.row) else { return UITableViewCell() }
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "profile")
         
+        guard let user = currentUser else { return UITableViewCell() }
+        
         var cellTitle = ""
         var cellContent = ""
         switch info {
         case .Age:
             cellTitle = "Idade:"
-            cellContent = "23 anos"
+            if user.age != 0 {
+                cellContent = "\(user.age)"
+            } else {
+                cellContent = "No data"
+            }
             break;
         case .BMI:
             cellTitle = "IMC:"
@@ -64,15 +100,27 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             break;
         case .Gender:
             cellTitle = "Gênero:"
-            cellContent = "Masculino"
+            if user.genre != "" {
+                cellContent = "\(user.genre)"
+            } else {
+                cellContent = "No data"
+            }
             break;
         case .Height:
             cellTitle = "Altura:"
-            cellContent = "1,78 m"
+            if user.height != 0 {
+                cellContent = "\(user.height)"
+            } else {
+                cellContent = "No data"
+            }
             break;
         case .Weight:
             cellTitle = "Peso:"
-            cellContent = "92 kg"
+            if user.weight != 0 {
+                cellContent = "\(user.weight)"
+            } else {
+                cellContent = "No data"
+            }
             break;
         }
         cell.textLabel?.text = cellTitle

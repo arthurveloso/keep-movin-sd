@@ -103,6 +103,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVN-GN-Rh7">
+                                <rect key="frame" x="318" y="151" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HDo-U2-6eG"/>
+                                    <constraint firstAttribute="width" constant="76" id="y2A-4o-QFe"/>
+                                </constraints>
+                                <state key="normal" title="Log out"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -110,6 +118,8 @@
                             <constraint firstItem="2SV-KR-5kP" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="37" id="A3e-xj-Fml"/>
                             <constraint firstItem="Vng-uS-1ER" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="APG-E7-dHH"/>
                             <constraint firstItem="GZo-IB-hqs" firstAttribute="top" secondItem="Vng-uS-1ER" secondAttribute="bottom" constant="21" id="C1A-0V-xWf"/>
+                            <constraint firstItem="mVN-GN-Rh7" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="11" id="O9b-ms-GR5"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="mVN-GN-Rh7" secondAttribute="trailing" constant="20" id="TPW-om-7hm"/>
                             <constraint firstItem="GZo-IB-hqs" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="WLH-DJ-Vbb"/>
                             <constraint firstItem="Vng-uS-1ER" firstAttribute="top" secondItem="2SV-KR-5kP" secondAttribute="bottom" constant="34" id="Zue-bS-EtN"/>
                             <constraint firstItem="GZo-IB-hqs" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="mGc-uX-FmL"/>
@@ -119,6 +129,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cVV-ll-hRi"/>
                     <connections>
+                        <outlet property="logoutButton" destination="mVN-GN-Rh7" id="Pw6-uP-pHz"/>
                         <outlet property="profileImageView" destination="2SV-KR-5kP" id="YAO-ya-Dvm"/>
                         <outlet property="profileInfoTableView" destination="GZo-IB-hqs" id="WAd-Vn-B0o"/>
                         <outlet property="profileNameLabel" destination="Vng-uS-1ER" id="AaV-QO-ATu"/>

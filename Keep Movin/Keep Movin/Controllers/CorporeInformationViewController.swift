@@ -23,7 +23,8 @@ class CorporeInformationViewController: UIViewController {
     var email : String = ""
     var password : String = ""
     var ref : DatabaseReference!
-    var user : User!
+//    var user : User!
+    var ownUser: KMUser!
     
     override func viewDidLoad() {
         self.style()
@@ -51,39 +52,27 @@ class CorporeInformationViewController: UIViewController {
         SaveButton.layer.cornerRadius = 10
         SaveButton.layer.backgroundColor = UIColor().navBarColor().cgColor
         
-        SaveButton.addTarget(self, action: #selector(firebaseRequest), for: .touchUpInside)
+        SaveButton.addTarget(self, action: #selector(saveUser), for: .touchUpInside)
         
     }
     
-    @objc func firebaseRequest(){
+    @objc func saveUser() {
+        guard let age = self.AgeTextField.text, let height = self.HeightTextField.text, let weight = self.WeightTextField.text, let genre = self.GenreTextField.text else { return }
         
-        Database.database().reference(withPath: "users")
+        ownUser.age = Int(age)!
+        ownUser.height = Int(height)!
+        ownUser.weight = Int(weight)!
+        ownUser.genre = genre
         
-        guard let age = self.AgeTextField.text, let height = self.HeightTextField.text, let weight = self.WeightTextField.text, let genre = self.GenreTextField.text else{ return }
-        
-        let dictionary = ["userName" : self.userName,
-                            "Email" : self.email,
-                            "Age" : age,
-                            "Height" : height,
-                            "Weight" : weight,
-                            "Genre" : genre]
-        
-        self.ref.child("Users").child(user.uid).setValue(dictionary, withCompletionBlock: {
-            (error, dataRef) in
-            
-            if error != nil{
-                print(error)
-                return
+        UsersManager.shared.createUser(user: ownUser, uid: ownUser.uid) { (user, error) in
+            if error == nil {
+                guard let page = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return }
+                
+                self.showDetailViewController(page, sender: nil)
             }
-            
-            guard let page = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return }
-            
-            self.showDetailViewController(page, sender: nil)
-            
-        })
-        
+        }
     }
-    
+
     private func layout(){
         
         guard let nav =  self.view else { return }
