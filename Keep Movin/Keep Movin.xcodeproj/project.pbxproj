@@ -455,6 +455,7 @@
 			baseConfigurationReference = 538A04B15ACB5BAC685A2CAF /* Pods-Keep Movin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YB4WRZF6W4;
 				INFOPLIST_FILE = "Keep Movin/Info.plist";
@@ -465,6 +466,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.keepmovin.Keep-Movin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -475,6 +477,7 @@
 			baseConfigurationReference = 44F6EF8A5488038A2E6BEF46 /* Pods-Keep Movin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YB4WRZF6W4;
 				INFOPLIST_FILE = "Keep Movin/Info.plist";
@@ -485,6 +488,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.keepmovin.Keep-Movin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

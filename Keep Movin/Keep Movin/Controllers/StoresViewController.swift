@@ -10,7 +10,6 @@ import UIKit
 
 class StoresViewController: UIViewController {
 
-    let helloText = "Olá, Arthur"
     let message = "Seus pontos: 4890"
     let productCellId = "productCell"
     let stores = [["nome": "Centauro", "produto": "tenis", "descricao": "De 229,99 por 199,99 + 15 mil pontos"], ["nome": "Netshoes", "produto": "natacao", "descricao": "De 59,99 por 29,99 + 10 mil pontos"]]
@@ -20,7 +19,7 @@ class StoresViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupNavBar(helloText: helloText, message: message)
+        setupNavBar(title: nil, message: message)
         productsCollectionView.register(ProductCell.self, forCellWithReuseIdentifier: productCellId)
     }
 }

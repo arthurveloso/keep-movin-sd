@@ -11,8 +11,7 @@ import Stevia
 import CoreMotion
 
 class HomeViewController: UIViewController {
-    
-    let helloText = "Olá, Arthur"
+
     let message = "Sua atividade"
     
     enum Cards: Int {
@@ -33,7 +32,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavBar(helloText: helloText, message: message)
+        setupNavBar(title: nil, message: message)
+
         cardsCollectionView.register(PerformanceCell.self, forCellWithReuseIdentifier: performanceCellId)
         cardsCollectionView.register(RankingCell.self, forCellWithReuseIdentifier: rankingCellId)
         cardsCollectionView.register(StickersCell.self, forCellWithReuseIdentifier: stickersCellId)

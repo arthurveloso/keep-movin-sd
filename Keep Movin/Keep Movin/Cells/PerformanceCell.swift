@@ -15,7 +15,10 @@ class PerformanceCell: KMCards {
     var didLayoutSubview = false
     override func layoutSubviews() {
         super.layoutSubviews()
-        setupViews()
+        if !didLayoutSubview {
+            setupViews()
+            didLayoutSubview = true
+        }
     }
     
     func setupViews() {

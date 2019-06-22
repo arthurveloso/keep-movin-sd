@@ -9,10 +9,20 @@
 import UIKit
 
 extension UIViewController {
-    func setupNavBar(helloText: String, message: String) {
+    func setupNavBar(title: String?, message: String) {
         navigationController?.navigationBar.prefersLargeTitles = true
 
-        self.title = helloText + "\n" + message
+        UsersManager.shared.getCurrentUser { (user) in
+            if user != nil {
+                self.title = "Olá, \(String(describing: user!.username))" + "\n" + message
+            } else {
+                self.title = "Olá, atleta" + "\n" + message
+            }
+        }
+
+        if title != nil {
+            self.title = title! + "\n" + message
+        }
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
