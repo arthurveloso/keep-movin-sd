@@ -11,8 +11,7 @@ import Stevia
 import FirebaseAuth
 
 class ProfileViewController: UIViewController {
-    
-    let helloText = "Olá, Arthur"
+
     let message = "Seu perfil"
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
@@ -31,7 +30,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupNavBar(helloText: helloText, message: message)
+        setupNavBar(title: nil, message: message)
         UsersManager.shared.getCurrentUser { (user) in
             if user != nil {
                 self.currentUser = user!
