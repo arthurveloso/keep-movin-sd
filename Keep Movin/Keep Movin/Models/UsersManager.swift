@@ -17,9 +17,9 @@ class UsersManager {
         return Database.database().reference().child("Users")
     }
     
-    init(<#parameters#>) {
-        <#statements#>
-    }
+//    init(<#parameters#>) {
+//        <#statements#>
+//    }
 
     func createUser(user: KMUser, uid: String, completion: @escaping(_ hero: KMUser?, _ error: Error?) -> Void) {
         let userChild = usersRef.child(uid)

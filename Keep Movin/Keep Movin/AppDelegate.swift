@@ -27,15 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
         IQKeyboardManager.shared.enable = true
-        guard let home = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return true }
         
-        self.window?.rootViewController = home
+        guard let login = UIStoryboard.init(name: "Login", bundle: Bundle.main).instantiateInitialViewController() else { return true }
+        
+        self.window?.rootViewController = login
         
         Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user == nil {
-                guard let login = UIStoryboard.init(name: "Login", bundle: Bundle.main).instantiateInitialViewController() else { return }
+            if user != nil {
+                guard let home = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return  }
                 
-                self.window?.rootViewController = login
+                self.window?.rootViewController = home
             }
         }
         
