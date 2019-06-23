@@ -88,7 +88,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case .Age:
             cellTitle = "Idade:"
             if user.age != 0 {
-                cellContent = "\(user.age)"
+                cellContent = "\(user.age) anos"
             } else {
                 cellContent = "No data"
             }
@@ -108,7 +108,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case .Height:
             cellTitle = "Altura:"
             if user.height != 0 {
-                cellContent = "\(user.height)"
+                cellContent = "\(user.height) cm"
             } else {
                 cellContent = "No data"
             }
@@ -116,7 +116,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case .Weight:
             cellTitle = "Peso:"
             if user.weight != 0 {
-                cellContent = "\(user.weight)"
+                cellContent = "\(user.weight) kg"
             } else {
                 cellContent = "No data"
             }

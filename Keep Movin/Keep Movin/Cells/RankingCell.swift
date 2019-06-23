@@ -13,11 +13,19 @@ class RankingCell: KMCards {
 
     var rankingTableView = UITableView()
     let rankingCellId = "rankingCell"
-    let friends = ["Victor", "Eu", "Rodrigo", "Nickson", "Marcos"]
+    var friends: [[String: Int]]? = [["Arthur":10]] {
+        didSet {
+            rankingTableView.reloadData()
+        }
+    }
+    var didLayoutSubviews = false
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        setupViews()
+        if !didLayoutSubviews {
+            setupViews()
+            didLayoutSubviews = true
+        }
     }
     
     func setupViews() {
@@ -40,7 +48,7 @@ class RankingCell: KMCards {
 
 extension RankingCell: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friends.count
+        return friends!.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,10 +60,15 @@ extension RankingCell: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: rankingCellId)
+        let cell: UITableViewCell = UITableViewCell(style: .value1, reuseIdentifier: rankingCellId)
         cell.backgroundColor = .clear
         cell.textLabel?.textColor = .white
-        cell.textLabel?.text = friends[indexPath.row]
+        cell.detailTextLabel?.textColor = .white
+        for (key, value) in friends![indexPath.row] {
+            cell.textLabel?.text = key
+            cell.detailTextLabel?.text = "\(value) passos"
+        }
+//        cell.textLabel?.text = friends[indexPath.row]
         
         return cell
     }
