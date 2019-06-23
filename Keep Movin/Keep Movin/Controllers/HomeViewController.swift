@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
     let stickersCellId = "stickers"
     let pedometer = CMPedometer()
     var steps: String?
+    var usersDic: [[String: Int]]? = [[:]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,23 @@ class HomeViewController: UIViewController {
         cardsCollectionView.register(RankingCell.self, forCellWithReuseIdentifier: rankingCellId)
         cardsCollectionView.register(StickersCell.self, forCellWithReuseIdentifier: stickersCellId)
         setupPedometer()
+        let usersManager = UsersManager()
+        usersManager.fetchAllUsers { (users) in
+            if let users = users, users.count > 0 {
+                for user in users {
+                    self.usersDic?.append([user.username: user.lifetimeSteps])
+                }
+            }
+            self.usersDic?.sorted(by: { (aDic, bDic) -> Bool in
+                for (_, aValue) in aDic {
+                    for (_, bValue) in bDic {
+                        aValue < bValue
+                    }
+                }
+                return true
+            })
+            self.cardsCollectionView.reloadData()
+        }
     }
     
     func setupPedometer() {
@@ -57,6 +75,7 @@ class HomeViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.steps = "\(data!.numberOfSteps)"
                     self.cardsCollectionView.reloadData()
+                    UsersManager.shared.updateStepsCounter(steps: Int(self.steps!)!)
                 }
             }
         }
@@ -88,6 +107,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case .Ranking:
             let rankingCell = collectionView.dequeueReusableCell(withReuseIdentifier: rankingCellId,
                                                                  for: indexPath) as! RankingCell
+            rankingCell.friends = usersDic
             return rankingCell
         case .Stickers:
             let stickersCell = collectionView.dequeueReusableCell(withReuseIdentifier: stickersCellId, for: indexPath) as! StickersCell

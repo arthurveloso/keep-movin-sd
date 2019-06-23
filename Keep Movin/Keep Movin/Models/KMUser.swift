@@ -16,6 +16,7 @@ class KMUser: NSObject {
     var height: Int = 0
     var weight: Int = 0
     var uid: String = ""
+    var lifetimeSteps: Int = 0
     
     init(dic: [String:Any]) {
         super.init()
