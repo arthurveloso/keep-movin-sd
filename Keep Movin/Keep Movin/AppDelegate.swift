@@ -32,20 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = login
         
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user != nil {
-                guard let home = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return  }
-                
-                self.window?.rootViewController = home
-            }
+        if Auth.auth().currentUser != nil {
+            guard let home = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return true}
+            
+            self.window?.rootViewController = home
         }
-        
-        
-        
         return true
     }
-    
-    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

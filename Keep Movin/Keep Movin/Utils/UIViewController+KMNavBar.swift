@@ -14,14 +14,14 @@ extension UIViewController {
 
         UsersManager.shared.getCurrentUser { (user) in
             if user != nil {
-                self.title = "Olá, \(String(describing: user!.username))" + "\n" + message
+                self.navigationItem.title = "Olá, \(String(describing: user!.username))" + "\n" + message
             } else {
-                self.title = "Olá, atleta" + "\n" + message
+                self.navigationItem.title = "Olá, atleta" + "\n" + message
             }
         }
 
         if title != nil {
-            self.title = title! + "\n" + message
+            self.navigationItem.title = title! + "\n" + message
         }
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

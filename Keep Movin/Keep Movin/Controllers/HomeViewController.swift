@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
     let stickersCellId = "stickers"
     let pedometer = CMPedometer()
     var steps: String?
+    var orderedUsersDic: [String: Int]? = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,20 @@ class HomeViewController: UIViewController {
         cardsCollectionView.register(RankingCell.self, forCellWithReuseIdentifier: rankingCellId)
         cardsCollectionView.register(StickersCell.self, forCellWithReuseIdentifier: stickersCellId)
         setupPedometer()
+        let usersManager = UsersManager()
+        var usersDic: [String: Int]? = [:]
+        usersManager.fetchAllUsers { (users) in
+            if let users = users, users.count > 0 {
+                for user in users {
+                    usersDic![user.username] = user.lifetimeSteps
+                }
+            }
+            for (k,v) in (Array(usersDic!).sorted {$0.0 < $1.0}) {
+                self.orderedUsersDic![k] = v
+            }
+            print(self.orderedUsersDic!)
+            self.cardsCollectionView.reloadData()
+        }
     }
     
     func setupPedometer() {
@@ -57,6 +72,7 @@ class HomeViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.steps = "\(data!.numberOfSteps)"
                     self.cardsCollectionView.reloadData()
+                    UsersManager.shared.updateStepsCounter(steps: Int(self.steps!)!)
                 }
             }
         }
@@ -88,6 +104,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case .Ranking:
             let rankingCell = collectionView.dequeueReusableCell(withReuseIdentifier: rankingCellId,
                                                                  for: indexPath) as! RankingCell
+            rankingCell.friends = orderedUsersDic
             return rankingCell
         case .Stickers:
             let stickersCell = collectionView.dequeueReusableCell(withReuseIdentifier: stickersCellId, for: indexPath) as! StickersCell
