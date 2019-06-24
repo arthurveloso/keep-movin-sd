@@ -13,7 +13,7 @@ class RankingCell: KMCards {
 
     var rankingTableView = UITableView()
     let rankingCellId = "rankingCell"
-    var friends: [[String: Int]]? = [["Arthur":10]] {
+    var friends: [String: Int]? = ["Arthur":10] {
         didSet {
             rankingTableView.reloadData()
         }
@@ -64,11 +64,12 @@ extension RankingCell: UITableViewDataSource, UITableViewDelegate {
         cell.backgroundColor = .clear
         cell.textLabel?.textColor = .white
         cell.detailTextLabel?.textColor = .white
-        for (key, value) in friends![indexPath.row] {
-            cell.textLabel?.text = key
-            cell.detailTextLabel?.text = "\(value) passos"
-        }
-//        cell.textLabel?.text = friends[indexPath.row]
+
+        let key = Array(self.friends!.keys)[indexPath.row]
+        let value = Array(self.friends!.values)[indexPath.row]
+        
+        cell.textLabel?.text = key
+        cell.detailTextLabel?.text = "\(value)"
         
         return cell
     }

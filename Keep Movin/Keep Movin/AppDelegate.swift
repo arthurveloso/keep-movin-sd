@@ -65,16 +65,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         
         self.window?.rootViewController = login
         
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user != nil {
-                guard let home = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return  }
-                
-                self.window?.rootViewController = home
-            }
+        if Auth.auth().currentUser != nil {
+            guard let home = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else { return true}
+            
+            self.window?.rootViewController = home
         }
-        
-        
-        
         return true
     }
     
@@ -100,6 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
         print("Received data message: \(remoteMessage.appData)")
+        
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

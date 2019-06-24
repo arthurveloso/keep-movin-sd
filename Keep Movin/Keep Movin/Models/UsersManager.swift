@@ -70,7 +70,7 @@ class UsersManager {
         var users: [KMUser] = []
         self.usersRef.observe(.value) { (snapshot) in
             if let usersDic = snapshot.value as? [String: Any] {
-                for (key, value) in usersDic {
+                for (_, value) in usersDic {
                     if let val = value as? [String: Any] {
                         let user = KMUser()
                         user.age = val["age"]! as! Int

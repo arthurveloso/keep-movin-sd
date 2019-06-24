@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
     let stickersCellId = "stickers"
     let pedometer = CMPedometer()
     var steps: String?
-    var usersDic: [[String: Int]]? = [[:]]
+    var orderedUsersDic: [String: Int]? = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,20 +40,17 @@ class HomeViewController: UIViewController {
         cardsCollectionView.register(StickersCell.self, forCellWithReuseIdentifier: stickersCellId)
         setupPedometer()
         let usersManager = UsersManager()
+        var usersDic: [String: Int]? = [:]
         usersManager.fetchAllUsers { (users) in
             if let users = users, users.count > 0 {
                 for user in users {
-                    self.usersDic?.append([user.username: user.lifetimeSteps])
+                    usersDic![user.username] = user.lifetimeSteps
                 }
             }
-            self.usersDic?.sorted(by: { (aDic, bDic) -> Bool in
-                for (_, aValue) in aDic {
-                    for (_, bValue) in bDic {
-                        aValue < bValue
-                    }
-                }
-                return true
-            })
+            for (k,v) in (Array(usersDic!).sorted {$0.0 < $1.0}) {
+                self.orderedUsersDic![k] = v
+            }
+            print(self.orderedUsersDic!)
             self.cardsCollectionView.reloadData()
         }
     }
@@ -107,7 +104,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case .Ranking:
             let rankingCell = collectionView.dequeueReusableCell(withReuseIdentifier: rankingCellId,
                                                                  for: indexPath) as! RankingCell
-            rankingCell.friends = usersDic
+            rankingCell.friends = orderedUsersDic
             return rankingCell
         case .Stickers:
             let stickersCell = collectionView.dequeueReusableCell(withReuseIdentifier: stickersCellId, for: indexPath) as! StickersCell

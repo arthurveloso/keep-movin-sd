@@ -10,10 +10,10 @@ import UIKit
 
 extension UIColor {
     func navBarColor() -> UIColor {
-        return UIColor(red: 217/255, green: 4/255, blue: 41/255, alpha: 1.0)
+        return UIColor(red: 217/255, green: 4/255, blue: 65/255, alpha: 1.0)
     }
     
     func cellColor() -> UIColor {
-        return UIColor(red: 239/255, green: 35/255, blue: 60/255, alpha: 1.0)
+        return UIColor(red: 217/255, green: 4/255, blue: 65/255, alpha: 1.0)
     }
 }
