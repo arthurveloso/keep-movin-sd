@@ -108,6 +108,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return rankingCell
         case .Stickers:
             let stickersCell = collectionView.dequeueReusableCell(withReuseIdentifier: stickersCellId, for: indexPath) as! StickersCell
+            stickersCell.stickers = stickersCell.stickers(passos: Int(steps!)!)
+            print(stickersCell.stickers)
+            stickersCell.setupViews()
             return stickersCell
         default:
             return UICollectionViewCell()
