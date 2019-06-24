@@ -9,10 +9,10 @@
 import UIKit
 
 class StoresViewController: UIViewController {
-
+    
     let message = "Seus pontos: 4890"
     let productCellId = "productCell"
-    let stores = [["nome": "Centauro", "produto": "tenis", "descricao": "De 229,99 por 199,99 + 15 mil pontos"], ["nome": "Netshoes", "produto": "natacao", "descricao": "De 59,99 por 29,99 + 10 mil pontos"]]
+    var products: [KMProduct] = []
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
     
@@ -21,22 +21,26 @@ class StoresViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupNavBar(title: nil, message: message)
         productsCollectionView.register(ProductCell.self, forCellWithReuseIdentifier: productCellId)
+        ProductsManager.shared.fetchProducts { (products) in
+            if products != nil, products!.count > 0 {
+                self.products = products!
+                self.productsCollectionView.reloadData()
+            }
+        }
     }
 }
 
 extension StoresViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productCellId, for: indexPath) as! ProductCell
-        cell.storeImage.image = UIImage(named: stores[indexPath.row]["nome"]!)
-        cell.storeName.text = stores[indexPath.row]["nome"]!
-        cell.productImage.image = UIImage(named: stores[indexPath.row]["produto"]!)
-        cell.productDescription.text = stores[indexPath.row]["descricao"]!
+        cell.storeName.text = products[indexPath.row].storeName
+        cell.storeImage.downloaded(from: products[indexPath.row].storeImgUrl, contentMode: .scaleAspectFill)
+        cell.productDescription.text = products[indexPath.row].productDesc
+        cell.productImage.downloaded(from: products[indexPath.row].productImgUrl, contentMode: .scaleAspectFill)
         return cell
     }
-    
-    
 }
