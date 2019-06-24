@@ -37,15 +37,15 @@ class RegisterViewController: UIViewController {
         
         FirulaImageView.image = UIImage(named: "run")
         
-        NameTextField.placeholder = "User Name"
+        NameTextField.placeholder = "Nome"
         
         EmailTextField.placeholder = "E-mail"
         EmailTextField.keyboardType = .emailAddress
         
-        PasswordTextField.placeholder = "Password"
+        PasswordTextField.placeholder = "Senha"
         PasswordTextField.isSecureTextEntry = true
         
-        RePasswordTextField.placeholder = "Confirm Password"
+        RePasswordTextField.placeholder = "Confirmar senha"
         RePasswordTextField.isSecureTextEntry = true
         
         NextButton.text("Continue")

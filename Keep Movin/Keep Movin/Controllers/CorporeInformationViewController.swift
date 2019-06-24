@@ -39,15 +39,15 @@ class CorporeInformationViewController: UIViewController {
         
         ProfileImageView.image = UIImage(named: "blob")
         
-        AgeTextField.placeholder = "Age"
+        AgeTextField.placeholder = "Idade"
         
-        HeightTextField.placeholder = "Height"
+        HeightTextField.placeholder = "Altura, em centímetros"
         
-        WeightTextField.placeholder = "Weight"
+        WeightTextField.placeholder = "Peso, em quilogramas"
         
-        GenreTextField.placeholder = "Genre"
+        GenreTextField.placeholder = "Gênero"
         
-        SaveButton.text("Save")
+        SaveButton.text("Salvar")
         SaveButton.tintColor = .white
         SaveButton.layer.cornerRadius = 10
         SaveButton.layer.backgroundColor = UIColor().navBarColor().cgColor

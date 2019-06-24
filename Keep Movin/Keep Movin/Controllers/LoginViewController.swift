@@ -41,10 +41,10 @@ class LoginViewController: UIViewController{
         
         IconImageView.image = UIImage(named: "loog")
         
-        UserTextField.placeholder = "Email"
+        UserTextField.placeholder = "E-mail"
         UserTextField.keyboardType = .emailAddress
         
-        PasswordTextField.placeholder = "Password"
+        PasswordTextField.placeholder = "Senha"
         PasswordTextField.isSecureTextEntry = true
         
         LogInButton.text("Log In")
