@@ -13,7 +13,7 @@ class StickersCell: KMCards {
     
     let stickerCellId = "stickerCell"
 //    let friends = ["Victor", "Eu", "Rodrigo", "Nickson", "Marcos"]
-    let stickers = ["cristo", "eiffel", "empire"]
+    var stickers = [String]()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -68,5 +68,27 @@ extension StickersCell: UICollectionViewDelegate, UICollectionViewDataSource, UI
         return 30
     }
     
+    
+}
+
+extension StickersCell{
+    
+    func stickers(passos: Int) -> [String] {
+        
+        var stickers = [String]()
+        
+        if passos > 1000{
+            stickers.append("cristo")
+        }
+        if passos > 2000{
+            stickers.append("eiffel")
+        }
+        if passos > 2888{
+            stickers.append("empire")
+        }
+        
+        return stickers
+        
+    }
     
 }
