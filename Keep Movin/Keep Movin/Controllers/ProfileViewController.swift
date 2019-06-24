@@ -69,6 +69,22 @@ class ProfileViewController: UIViewController {
             print("Error")
         }
     }
+
+    func getBMIDescription(bmi: Double) -> String {
+        var bmiDescription = ""
+        if bmi < 18.5 {
+            bmiDescription = "Magreza"
+        } else if bmi >= 18.5 && bmi < 25.0 {
+            bmiDescription = "Normal"
+        } else if bmi >= 25.0 && bmi < 30.0 {
+            bmiDescription = "Sobrepeso"
+        } else if bmi >= 30.0 && bmi < 40.0 {
+            bmiDescription = "Obesidade"
+        } else if bmi >= 40.0 {
+            bmiDescription = "Obesidade Grave"
+        }
+        return bmiDescription
+    }
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
@@ -90,19 +106,26 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             if user.age != 0 {
                 cellContent = "\(user.age) anos"
             } else {
-                cellContent = "No data"
+                cellContent = "Sem dados"
             }
             break;
         case .BMI:
             cellTitle = "IMC:"
-            cellContent = "29,0 - Sobrepeso"
+            cellContent = "Sem dados"
+            if user.height != 0, user.weight != 0 {
+                let heightInMeters = Double(user.height) / 100
+                let bmi = Double(user.weight) / (Double(heightInMeters) * Double(heightInMeters))
+                let rounded = round(10*bmi)/10
+                let bmiDesc = getBMIDescription(bmi: bmi)
+                cellContent = "\(rounded) - \(bmiDesc)"
+            }
             break;
         case .Gender:
             cellTitle = "Gênero:"
             if user.genre != "" {
                 cellContent = "\(user.genre)"
             } else {
-                cellContent = "No data"
+                cellContent = "Sem dados"
             }
             break;
         case .Height:
@@ -110,7 +133,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             if user.height != 0 {
                 cellContent = "\(user.height) cm"
             } else {
-                cellContent = "No data"
+                cellContent = "Sem dados"
             }
             break;
         case .Weight:
@@ -118,7 +141,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             if user.weight != 0 {
                 cellContent = "\(user.weight) kg"
             } else {
-                cellContent = "No data"
+                cellContent = "Sem dados"
             }
             break;
         }
