@@ -28,8 +28,9 @@ class HomeViewController: UIViewController {
     let stickersCellId = "stickers"
     let pedometer = CMPedometer()
     var steps: String?
-    var orderedUsersDic: [String: Int]? = [:]
-    
+    var usersRank: [String] = []
+    var stepsRank: [Int] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,10 +48,12 @@ class HomeViewController: UIViewController {
                     usersDic![user.username] = user.lifetimeSteps
                 }
             }
-            for (k,v) in (Array(usersDic!).sorted {$0.0 < $1.0}) {
-                self.orderedUsersDic![k] = v
+
+            for (k,v) in (Array(usersDic!).sorted {$0.1 > $1.1}) {
+                self.usersRank.append(k)
+                self.stepsRank.append(v)
             }
-            print(self.orderedUsersDic!)
+
             self.cardsCollectionView.reloadData()
         }
     }
@@ -104,11 +107,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case .Ranking:
             let rankingCell = collectionView.dequeueReusableCell(withReuseIdentifier: rankingCellId,
                                                                  for: indexPath) as! RankingCell
-            rankingCell.friends = orderedUsersDic
+            rankingCell.friends = usersRank
+            rankingCell.steps = stepsRank
             return rankingCell
         case .Stickers:
             let stickersCell = collectionView.dequeueReusableCell(withReuseIdentifier: stickersCellId, for: indexPath) as! StickersCell
-            stickersCell.stickers = stickersCell.stickers(passos: Int(steps!)!)
+            if let steps = steps {
+                stickersCell.stickers = stickersCell.stickers(passos: Int(steps)!)
+            }
             print(stickersCell.stickers)
             stickersCell.setupViews()
             return stickersCell
