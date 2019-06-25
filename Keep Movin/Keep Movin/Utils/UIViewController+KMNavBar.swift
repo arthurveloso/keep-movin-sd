@@ -25,7 +25,9 @@ extension UIViewController {
         }
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
+
+        self.navigationController?.navigationBar.barStyle = .black
+
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font : UIFont.preferredFont(forTextStyle: .largeTitle)

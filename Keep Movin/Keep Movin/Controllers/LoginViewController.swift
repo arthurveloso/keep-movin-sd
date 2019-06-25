@@ -38,25 +38,22 @@ class LoginViewController: UIViewController{
     }
     
     private func style(){
-        
-//        IconImageView.image = UIImage(named: "loog")
-        
         UserTextField.placeholder = "E-mail"
         UserTextField.keyboardType = .emailAddress
         
         PasswordTextField.placeholder = "Senha"
         PasswordTextField.isSecureTextEntry = true
         
-        LogInButton.text("Log In")
+        LogInButton.text("Entrar")
         LogInButton.tintColor = .white
         LogInButton.layer.cornerRadius = 10
         LogInButton.layer.backgroundColor = UIColor().navBarColor().cgColor
         
         LogInButton.addTarget(self, action: #selector(checkUser), for: .touchUpInside)
         
-        OrLabel.text("or")
+        OrLabel.text("ou")
         
-        SignUpButton.text("Sign In")
+        SignUpButton.text("Criar conta")
         SignUpButton.tintColor = .white
         SignUpButton.layer.cornerRadius = 10
         SignUpButton.layer.backgroundColor = UIColor().navBarColor().cgColor
@@ -95,7 +92,7 @@ class LoginViewController: UIViewController{
         Auth.auth().signIn(withEmail: userName, password: password, completion: {
             (authResult, error) in
             if let error = error, authResult == nil {
-                let alert = UIAlertController(title: "Sign In Failed", message: error.localizedDescription, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Log In falhou", message: error.localizedDescription, preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 
