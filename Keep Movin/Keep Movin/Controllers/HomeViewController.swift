@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     var steps: String?
     var usersRank: [String] = []
     var stepsRank: [Int] = []
+    var progress = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,7 @@ class HomeViewController: UIViewController {
             if data != nil {
                 DispatchQueue.main.async {
                     self.steps = "\(data!.numberOfSteps)"
+                    self.progress = (0.8 * data!.numberOfSteps.doubleValue)/10000
                     self.cardsCollectionView.reloadData()
                 }
             }
@@ -74,6 +76,7 @@ class HomeViewController: UIViewController {
             if data != nil {
                 DispatchQueue.main.async {
                     self.steps = "\(data!.numberOfSteps)"
+                    self.progress = (0.8 * data!.numberOfSteps.doubleValue)/10000
                     self.cardsCollectionView.reloadData()
                     UsersManager.shared.updateStepsCounter(steps: Int(self.steps!)!)
                 }
@@ -101,6 +104,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 let descriptionString = NSAttributedString(string: "\npassos", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20, weight: .light)])
                 attributedText.append(stepsString)
                 attributedText.append(descriptionString)
+                performanceCell.progress = self.progress
                 performanceCell.progressLabel.attributedText = attributedText
             }
             return performanceCell

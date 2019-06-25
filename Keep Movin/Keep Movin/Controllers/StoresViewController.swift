@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class StoresViewController: UIViewController {
     
     let message = "Seus pontos: 4890"
     let productCellId = "productCell"
     var products: [KMProduct] = []
+    let productsRef = Database.database().reference().child("Stores")
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
     
@@ -21,10 +23,23 @@ class StoresViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupNavBar(title: nil, message: message)
         productsCollectionView.register(ProductCell.self, forCellWithReuseIdentifier: productCellId)
-        ProductsManager.shared.fetchProducts { (products) in
-            if products != nil, products!.count > 0 {
-                self.products = products!
-                self.productsCollectionView.reloadData()
+        DispatchQueue.main.async {
+            self.productsRef.observe(.value) { (snapshot) in
+                if let productsDic = snapshot.value as? [String: Any] {
+                    var productsReceived: [KMProduct] = []
+                    for (_, value) in productsDic {
+                        if let val = value as? [String: Any] {
+                            let product = KMProduct()
+                            product.storeName = val["storeName"] as! String
+                            product.productDesc = val["productDesc"] as! String
+                            product.storeImgUrl = val["storeImgUrl"] as! String
+                            product.productImgUrl = val["productImgUrl"] as! String
+                            productsReceived.append(product)
+                        }
+                    }
+                    self.products = productsReceived
+                    self.productsCollectionView.reloadData()
+                }
             }
         }
     }

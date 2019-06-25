@@ -13,6 +13,8 @@ class PerformanceCell: KMCards {
     let todayLabel = UILabel()
     let progressLabel = UILabel()
     var didLayoutSubview = false
+    var progress = 0.2
+
     override func layoutSubviews() {
         super.layoutSubviews()
         if !didLayoutSubview {
@@ -48,7 +50,7 @@ class PerformanceCell: KMCards {
         layer.addSublayer(trackLayer)
         
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        basicAnimation.toValue = 0.3
+        basicAnimation.toValue = progress
         basicAnimation.duration = 1
         basicAnimation.fillMode = .forwards
         basicAnimation.isRemovedOnCompletion = false
