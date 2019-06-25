@@ -39,7 +39,7 @@ class LoginViewController: UIViewController{
     
     private func style(){
         
-        IconImageView.image = UIImage(named: "loog")
+//        IconImageView.image = UIImage(named: "loog")
         
         UserTextField.placeholder = "E-mail"
         UserTextField.keyboardType = .emailAddress
@@ -71,8 +71,8 @@ class LoginViewController: UIViewController{
                self.LogInButton,
                self.OrLabel,
                self.SignUpButton)
-        self.IconImageView.heightEqualsWidth()
-        self.IconImageView.centerHorizontally().width(50%).Top == nav.safeAreaLayoutGuide.Top
+        self.IconImageView.height(30%)
+        self.IconImageView.centerHorizontally().width(70%).Top == nav.safeAreaLayoutGuide.Top
         
         self.UserTextField.centerHorizontally().width(75%).height(40).Top == IconImageView.Bottom + 20
         
@@ -102,14 +102,6 @@ class LoginViewController: UIViewController{
                 self.present(alert, animated: true, completion: nil)
             }
             
-//            guard let user = authResult?.user else {
-//
-//                // notifications com os possiveis erros
-//
-//                return
-//
-//            }
-            
             guard let page = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UITabBarController else {
                 return
             }
@@ -121,30 +113,3 @@ class LoginViewController: UIViewController{
     }
     
 }
-
-//
-//// Custom View
-//class CustomView: UIView {
-//    let buttom = UIButton.init()
-//    let userName = UILabel.init()
-//    let password = UILabel.init()
-//
-//
-//    init() {
-//        super.init(frame: CGRect.zero)
-//        self.style()
-//        self.layout()
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-//    private func style() {
-//        buttom.text("Click Button")
-//        userName.text = "Label 01"
-//        password.text = "Label 02"
-//    }
-//
-//
-//}

@@ -44,7 +44,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTU-bA-xMK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guy" translatesAutoresizingMaskIntoConstraints="NO" id="MTU-bA-xMK">
                                 <rect key="frame" x="244" y="195" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -231,4 +231,7 @@
             <point key="canvasLocation" x="186.95652173913044" y="148.66071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="guy" width="1223" height="450"/>
+    </resources>
 </document>
