@@ -40,9 +40,11 @@ class LoginViewController: UIViewController{
     private func style(){
         UserTextField.placeholder = "E-mail"
         UserTextField.keyboardType = .emailAddress
+        UserTextField.setDefaultStyle()
         
         PasswordTextField.placeholder = "Senha"
         PasswordTextField.isSecureTextEntry = true
+        PasswordTextField.setDefaultStyle()
         
         LogInButton.text("Entrar")
         LogInButton.tintColor = .white

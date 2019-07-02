@@ -15,6 +15,7 @@
 		6746720E22A8AA47007F537F /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6746720D22A8AA47007F537F /* StoresViewController.swift */; };
 		6746721022A8AA6F007F537F /* UIViewController+KMNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6746720F22A8AA6F007F537F /* UIViewController+KMNavBar.swift */; };
 		6746721322A8C131007F537F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6746721222A8C131007F537F /* ProductCell.swift */; };
+		674A203522CAF9E300E39D76 /* UITextField+KMStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674A203422CAF9E300E39D76 /* UITextField+KMStyle.swift */; };
 		67668F9F22A7837C00224777 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668F9E22A7837C00224777 /* UIColor+Colors.swift */; };
 		6797D46022C0F92E005ADE9F /* ProductsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6797D45F22C0F92E005ADE9F /* ProductsManager.swift */; };
 		6797D46222C0FB1A005ADE9F /* KMProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6797D46122C0FB1A005ADE9F /* KMProduct.swift */; };
@@ -44,6 +45,7 @@
 		6746720D22A8AA47007F537F /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
 		6746720F22A8AA6F007F537F /* UIViewController+KMNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KMNavBar.swift"; sourceTree = "<group>"; };
 		6746721222A8C131007F537F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		674A203422CAF9E300E39D76 /* UITextField+KMStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+KMStyle.swift"; sourceTree = "<group>"; };
 		67668F9E22A7837C00224777 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		6797D45F22C0F92E005ADE9F /* ProductsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsManager.swift; sourceTree = "<group>"; };
 		6797D46122C0FB1A005ADE9F /* KMProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProduct.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				67668F9E22A7837C00224777 /* UIColor+Colors.swift */,
 				6746720F22A8AA6F007F537F /* UIViewController+KMNavBar.swift */,
 				6797D46322C0FD8F005ADE9F /* UIImageView+Downloaded.swift */,
+				674A203422CAF9E300E39D76 /* UITextField+KMStyle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				67668F9F22A7837C00224777 /* UIColor+Colors.swift in Sources */,
 				679BD5C922A7524E00825D99 /* AppDelegate.swift in Sources */,
 				6746721322A8C131007F537F /* ProductCell.swift in Sources */,
+				674A203522CAF9E300E39D76 /* UITextField+KMStyle.swift in Sources */,
 				6746721022A8AA6F007F537F /* UIViewController+KMNavBar.swift in Sources */,
 				679BD5CB22A7524E00825D99 /* HomeViewController.swift in Sources */,
 				74F972A622BD65A700A1D3EA /* KMUser.swift in Sources */,

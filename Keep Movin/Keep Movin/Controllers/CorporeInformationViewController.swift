@@ -25,6 +25,8 @@ class CorporeInformationViewController: UIViewController {
     var ref : DatabaseReference!
 //    var user : User!
     var ownUser: KMUser!
+    var pickerData = ["Feminino", "Masculino", "Outro"]
+    let genderPicker = UIPickerView()
     
     override func viewDidLoad() {
         self.style()
@@ -40,12 +42,23 @@ class CorporeInformationViewController: UIViewController {
         ProfileImageView.image = UIImage(named: "blob")
         
         AgeTextField.placeholder = "Idade"
+        AgeTextField.keyboardType = .numberPad
+        AgeTextField.setDefaultStyle()
         
         HeightTextField.placeholder = "Altura, em centímetros"
+        HeightTextField.keyboardType = .numberPad
+        HeightTextField.setDefaultStyle()
         
         WeightTextField.placeholder = "Peso, em quilogramas"
+        WeightTextField.keyboardType = .numberPad
+        WeightTextField.setDefaultStyle()
         
+        genderPicker.delegate = self
+
         GenreTextField.placeholder = "Gênero"
+        GenreTextField.inputView = genderPicker
+        GenreTextField.delegate = self
+        GenreTextField.setDefaultStyle()
         
         SaveButton.text("Salvar")
         SaveButton.tintColor = .white
@@ -97,4 +110,28 @@ class CorporeInformationViewController: UIViewController {
         
     }
     
+}
+
+extension CorporeInformationViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        GenreTextField.text = pickerData[row]
+    }
+}
+
+extension CorporeInformationViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = pickerData[genderPicker.selectedRow(inComponent: 0)]
+    }
 }

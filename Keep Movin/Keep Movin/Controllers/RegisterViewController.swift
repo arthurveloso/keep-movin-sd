@@ -38,21 +38,24 @@ class RegisterViewController: UIViewController {
         FirulaImageView.image = UIImage(named: "run")
         
         NameTextField.placeholder = "Nome"
+        NameTextField.setDefaultStyle()
         
         EmailTextField.placeholder = "E-mail"
         EmailTextField.keyboardType = .emailAddress
+        EmailTextField.setDefaultStyle()
         
         PasswordTextField.placeholder = "Senha"
         PasswordTextField.isSecureTextEntry = true
+        PasswordTextField.setDefaultStyle()
         
         RePasswordTextField.placeholder = "Confirmar senha"
         RePasswordTextField.isSecureTextEntry = true
+        RePasswordTextField.setDefaultStyle()
         
         NextButton.text("Continue")
         NextButton.tintColor = .white
         NextButton.layer.cornerRadius = 10
         NextButton.layer.backgroundColor = UIColor().navBarColor().cgColor
-        
     }
     
     private func layout() {
